@@ -7,11 +7,14 @@ navbar:
      - text: "მასალები"
        href: pages/materials.html
      - text: "თემები"
-       href: pages/topics.html
+       href: pages/topic.html
      - text: "სილაბუსი, დასწრება და შეფასება"
        href: pages/attend.html
      - text: "R-სახელმძღვანელო"
-       href: pages/rmat.html
+       menu:
+       - text: "შესავალი"
+         href: pages/intro.nb.html
+
 output:
   html_document:
     theme: cosmo
