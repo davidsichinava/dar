@@ -12,8 +12,10 @@ navbar:
        href: pages/attend.html
      - text: "R-სახელმძღვანელო"
        menu:
-       - text: "შესავალი"
-         href: pages/intro.nb.html
+       - text: "წიგნიერი პროგრამირება და R-გარემო"
+         href: pages/intro.html
+       - text: "მონაცემთა მანიპულაცია"
+         href: pages/manipulation.html
 
 output:
   html_document:
