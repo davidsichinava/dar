@@ -1,0 +1,17 @@
+---
+title: "ლიტერატურა"
+output: html_document
+
+---
+
+### ძირითადი ლიტერატურა:
+
+Field, A., Miles, J., Field, Z: [_Discovering Statistics Using R._](https://www.dropbox.com/s/4858b2iw27sywqu/DiscoveringR.epub?dl=0) 4th Edition. Thousand Aoaks, CA: Sage Publications. 2012. (DIS) - _ამ წიგნისთვის დაგჭირდებათ epub-რიდერი_
+
+Imai, K.: [_Quantitative Social Science, An Introduction_](https://www.dropbox.com/s/3wb6t5igedhqjih/QSS.pdf?dl=0). Princeton University Press. 2017 (QSS)
+
+Grolemund, G. & Wickham, H.: [_R for Data Science_](http://r4ds.had.co.nz/) (R4DS)
+
+Dalgaard, Peter. [_Introductory statistics with R_](https://www.dropbox.com/s/vus2di6528t1513/IntroR.pdf?dl=0). Springer Science & Business Media, 2008. (ISR)
+
+Kruschke, John. [_Doing Bayesian data analysis: A tutorial with R, JAGS, and Stan_](https://www.dropbox.com/s/gldmg1x690l8qty/Bayesian.pdf?dl=0). Academic Press, 2014 (BAY)

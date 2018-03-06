@@ -1,0 +1,49 @@
+---
+title: "თემები"
+author: "დავით სიჭინავა"
+output: html_document
+
+---
+
+### თემა 1: შესავალი
+
+#### ![](ico/teacher.png) ლექცია:
+
+* კურსის შინაარსის მიმოხილვა;
+* ლოგისტიკური საკითხები
+* R-გარემოს გაცნობა; რეპროდუცირებადი კვლევის მნიშვნელობა სოციალურ მეცნიერებებში
+
+
+![](ico/open-book.png) საკითხავი მასალა:
+
+
++ Goodman, S. N., Fanelli, D., & Ioannidis, J. P. (2016). [What does research reproducibility mean?](https://www.dropbox.com/s/4io57pvabqw539s/Goodman%2C%202016.pdf?dl=0). _Science translational medicine_, 8(341).
++ Iqbal, S. A., Wallach, J. D., Khoury, M. J., Schully, S. D., & Ioannidis, J. P. (2016). [Reproducible research practices and transparency across the biomedical literature](https://www.dropbox.com/s/dgl3tbskfjjn5ib/iqbal_et_al%2C%202016.PDF?dl=0). _PLoS Biol_, 14(1).
++ Stodden, V. (2010). [Data sharing in social science repositories: facilitating reproducible computational research](https://www.dropbox.com/s/uh7vd6diud8tcyu/Stodden%2C%202010.pdf?dl=0). _NIPS_ 2010.
+
+
+#### ![](ico/flask-outline.png) ლაბორატორია:
+* შესავალი R-გარემოში
+* R-ის მომხმარებლის გრაფიკული გარემო: R-Studio
+* R-ის მომხმარებლის გრაფიკული გარემოს ძირითადი ელემენტები
+* R-მარკირების დოკუმენტის შექმნა
+* ,,წიგნიერი პროგრამირება'' და პროექტების ორგანიზების კარგი პრაქტიკა 
+* მონაცემების წაკითხვა R-გარემოში
+* [დავალება](https://davidsichinava.github.io/introstatsr/pages/m1/lab1.pdf)
+
+
+![](ico/book.png) დავალება ატვირთეთ ამ [ბმულზე]()
+
+### თემა 2: R-გარემოს გაცნობა
+
+* მონაცემთა დამუშავება R-ის გარემოში
+
+#### ![](ico/flask-outline.png) ლაბორატორია:
+
+* მონაცემთა ტიპები და ვექტორული ობიექტები
+	+ ატომური ობიექტები (სიმბოლო, ლოგიკური, მთელი და ათწილადი რიცხვები)
+	+ სია
+	+ ატრიბუტი
+	+ ფაქტორი
+	+ მასივი და მატრიცა
+	+ მონაცემთა ჩარჩო
