@@ -29,8 +29,8 @@ output: html_document
 * R-მარკირების დოკუმენტის შექმნა
 * ,,წიგნიერი პროგრამირება'' და პროექტების ორგანიზების კარგი პრაქტიკა 
 * მონაცემების წაკითხვა R-გარემოში
-* [პრეზენტაცია]()
+* [პრეზენტაცია](davidsichinava.github.io/dar/meetings/m1/pres/meeting_1.html)
 * [დავალება](https://davidsichinava.github.io/introstatsr/pages/m1/lab1.pdf)
 
 
-![](ico/book.png) დავალება ატვირთეთ ამ [ბმულზე]()
+![](ico/book.png) დავალება ატვირთეთ ამ [ბმულზე](https://www.dropbox.com/request/oUc9abSj2pWwLHgObGV7)
