@@ -14,7 +14,7 @@ UprightFont={*},
 BoldFont = {arial_geo-bold},
 ItalicFont = {arial_geo-italic},
 BoldItalicFont = {arial_geo-bold-italic}
-]{arial_geo}
+]{Sylfaen}
 
 \usepackage{hyperref}
 \hypersetup{
@@ -138,7 +138,17 @@ R-ბლოკნოტში ჩასვით კოდის ახალი
 
 \subsection*{ანოტირებული ბიბლიოგრაფია}
 
-რახან მარკირების ენის გარკვეულ საფუძვლებს უკვე ვფლობთ, ანოტირებული ბიბლიოგრაფიის ტექსტიც R-ბლოკნოტის საშუალებით მოამზადეთ. ამისთვის თქვენს კომპიუტერში დააყენეთ ტექსტური რედაქტორი (მაგალითად, Notepad++), შენახული ბლოკნოტის ფაილი მისი მეშვეობით გახსენით და ანოტაციის ტექსტი ჩაწერეთ. ანოტირებული ბიბლიოგრაფიისთვის APA ციტირების სტილი და შემდეგი შაბლონი გამოიყენეთ, იმ განსხვავებით, რომ თქვენი ტექსტი ქართულად უნდა იყოს:
+რახან მარკირების ენის გარკვეულ საფუძვლებს უკვე ვფლობთ, ანოტირებული ბიბლიოგრაფიის ტექსტიც R-ბლოკნოტის საშუალებით მოამზადეთ. ამისთვის თქვენს კომპიუტერში დააყენეთ ტექსტური რედაქტორი (მაგალითად, Notepad++), შენახული ბლოკნოტის ფაილი მისი მეშვეობით გახსენით (მარჯვენა კლიკი $=>$ Open With $=>$ $Notepad++$) და ანოტაციის ტექსტი ჩაწერეთ. ბიბლიოგრაფიისთვის შემდეგ სტატიებს გადახედეთ:
+
+\begin{itemize}
+\item{Goodman, S. N., Fanelli, D., & Ioannidis, J. P. (2016). [What does research reproducibility mean?](https://www.dropbox.com/s/4io57pvabqw539s/Goodman%2C%202016.pdf?dl=0). _Science translational medicine_, 8(341).}
+\item{Iqbal, S. A., Wallach, J. D., Khoury, M. J., Schully, S. D., & Ioannidis, J. P. (2016). [Reproducible research practices and transparency across the biomedical literature](https://www.dropbox.com/s/dgl3tbskfjjn5ib/iqbal_et_al%2C%202016.PDF?dl=0). _PLoS Biol_, 14(1).}
+\item{Stodden, V. (2010). [Data sharing in social science repositories: facilitating reproducible computational research](https://www.dropbox.com/s/uh7vd6diud8tcyu/Stodden%2C%202010.pdf?dl=0). _NIPS_ 2010.}
+\end{itemize}
+
+
+
+ანოტირებული ბიბლიოგრაფიისთვის APA ციტირების სტილი და შემდეგი შაბლონი გამოიყენეთ, იმ განსხვავებით, რომ თქვენი ტექსტი ქართულად უნდა იყოს:
 
 \\
 

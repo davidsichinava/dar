@@ -1,0 +1,24 @@
+---
+title: "My Research"
+output:
+  html_document: default
+  html_notebook: default
+---
+
+თავდაპირველად, მივუთითოთ სამუშაო დირექტორია, და შევამოწმოთ, მართლა გადაინაცვლა თუ არა ამ ფოლდერში
+
+```{r}
+setwd("D:\\Dropbox\\My projects\\Courses\\ST_R\\website\\meetings\\m1\\class")
+getwd()
+
+```
+
+
+ახლა მსურს, რომ ჩამოვტვირთო და გავუშვა ბიბლიოთეკა:
+```{r}
+# install.packages("ggplot2")
+library(ggplot2)
+
+```
+
+
