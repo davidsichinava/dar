@@ -30,7 +30,7 @@ output: html_document
 * ,,წიგნიერი პროგრამირება'' და პროექტების ორგანიზების კარგი პრაქტიკა 
 * მონაცემების წაკითხვა R-გარემოში
 * [პრეზენტაცია](https://davidsichinava.github.io/dar/meetings/m1/pres/meeting_1.html)
-* [დავალება](https://davidsichinava.github.io/dar/meetings/m1/lab1.pdf)
+* [დავალება](https://www.dropbox.com/s/iun44y0iv8mj2vv/lab1.pdf?dl=0)
 
 
 ![](ico/book.png) დავალება ატვირთეთ ამ [ბმულზე](https://www.dropbox.com/request/oUc9abSj2pWwLHgObGV7)
