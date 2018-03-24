@@ -47,6 +47,7 @@ output: html_document
 	+ ფაქტორი
 	+ მასივი და მატრიცა
 	+ მონაცემთა ჩარჩო
+* სკრიპტის ფაილი საკლასო სამუშაოდან
 
 <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
 <a href="https://davidsichinava.github.io/introstatsr/pages/m2/pres/meeting_2.html">პრეზენტაცია</a>

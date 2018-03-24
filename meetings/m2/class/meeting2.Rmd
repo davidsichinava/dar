@@ -1,0 +1,51 @@
+---
+title: "მეორე შეხვედრა"
+output: html_notebook
+---
+
+
+```{r}
+
+pirveli <- c("First", "Second", "Fish")
+
+pirveli
+
+pirveli[3]
+
+karada <- c(1, 7, 3, 35)
+
+karada[4]
+
+kosmosi <- list(42, "Douglas Adams")
+
+axali <- c(pirveli, karada)
+
+axali2 <- list(pirveli, karada)
+
+regionebi <- data.frame(
+  ID = c(1:11),
+  NAME = c("SZS", "RLK", "I", "G", "A", "SJ", "SK", "KK", "MM", "T", "K"),
+  VALUE.ADDED = c(1807, NA, 2685, 584, 2039, 724, 1485, 2162, NA, 12147, 1459))
+
+mean(regionebi$VALUE.ADDED, na.rm = TRUE)
+
+sd(regionebi$VALUE.ADDED, na.rm = TRUE)
+
+regionebi$ZORO <- regionebi$VALUE.ADDED^2
+
+regionebi$RAMBO <- regionebi$VALUE.ADDED+regionebi$ZORO
+
+regionebi$GEO <- c(1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2)  
+
+regionebi$GEO <- factor(regionebi$GEO, 
+                        levels = c(1, 2),
+                        label = c("WEST", "EAST"))
+
+table(regionebi$GEO)
+
+
+mean(regionebi$VALUE.ADDED[regionebi$GEO == "WEST"], na.rm = TRUE)
+mean(regionebi$VALUE.ADDED[regionebi$GEO == "EAST"], na.rm = TRUE)
+
+```
+
