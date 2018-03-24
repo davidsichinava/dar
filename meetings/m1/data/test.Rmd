@@ -1,0 +1,24 @@
+---
+title: "R Notebook"
+output:
+  html_document: default
+  html_notebook: default
+---
+
+ქვემოთ მოცემული კოდი ორს ორს უმატებს
+
+```{r}
+2+2
+getwd()
+setwd("D:\\Dropbox\\My Projects\\Courses\\ST_R\\website\\meetings\\m1\\data")
+getwd()
+
+library(haven)
+jondi <- read.csv("CB_2017_Georgia_public_17.11.17.csv", sep=",")
+guguli <- read_dta("CB_2017_Georgia_public_17.11.17.dta")
+
+```
+
+Add a new chunk by clicking the *Insert Chunk* button on the toolbar or by pressing *Ctrl+Alt+I*.
+
+When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the *Preview* button or press *Ctrl+Shift+K* to preview the HTML file).
