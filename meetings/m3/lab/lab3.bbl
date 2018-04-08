@@ -1,0 +1,308 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 2.9 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{nty/global//global/global}
+  \entry{boxell_is_2017}{report}{}
+    \name{author}{3}{}{%
+      {{hash=BL}{%
+         family={Boxell},
+         familyi={B\bibinitperiod},
+         given={Levi},
+         giveni={L\bibinitperiod},
+      }}%
+      {{hash=GM}{%
+         family={Gentzkow},
+         familyi={G\bibinitperiod},
+         given={Matthew},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=SJM}{%
+         family={Shapiro},
+         familyi={S\bibinitperiod},
+         given={Jesse\bibnamedelima M.},
+         giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{BLGMSJM1}
+    \strng{fullhash}{BLGMSJM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{sortinit}{B}
+    \field{sortinithash}{B}
+    \field{abstract}{%
+    We combine nine previously proposed measures to construct an index of
+  political polarization among {US} adults. We find that the growth in
+  polarization in recent years is largest for the demographic groups least
+  likely to use the internet and social media. For example, our overall index
+  and eight of the nine individual measures show greater increases for those
+  older than 75 than for those aged 18–39. These facts argue against the
+  hypothesis that the internet is a primary driver of rising political
+  polarization.%
+    }
+    \verb{doi}
+    \verb 10.3386/w23258
+    \endverb
+    \field{number}{23258}
+    \field{shorttitle}{Is the Internet Causing Political Polarization?}
+    \field{title}{Is the Internet Causing Political Polarization? Evidence from
+  Demographics}
+    \verb{url}
+    \verb http://www.nber.org/papers/w23258
+    \endverb
+    \list{institution}{1}{%
+      {National Bureau of Economic Research}%
+    }
+    \verb{file}
+    \verb Boxell et al_2017_Is the Internet Causing Political Polarization.pdf:
+    \verb C\:\\Users\\david\\Zotero\\storage\\H2RBUP6F\\Boxell et al_2017_Is th
+    \verb e Internet Causing Political Polarization.pdf:application/pdf
+    \endverb
+    \field{type}{Working Paper}
+    \field{month}{03}
+    \field{year}{2017}
+    \field{urlday}{07}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{levendusky_partisan_2017}{article}{}
+    \name{author}{1}{}{%
+      {{hash=LM}{%
+         family={Levendusky},
+         familyi={L\bibinitperiod},
+         given={Matthew},
+         giveni={M\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{LM1}
+    \strng{fullhash}{LM1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{abstract}{%
+    Four potential mechanisms explore the linkages between partian media
+  outlets and attitudinal polarization, as well as discusses how such outlets
+  cause polarization and influence American politics more generally: partisan
+  media outlets can have direct effects on their audience, indirect effects on
+  the broader population, effects on the news media, and effects on political
+  elites. Some challenges and questions remain to be answered in each area in
+  the hopes of spurring more, and broader, work on these media institutions.%
+    }
+    \verb{doi}
+    \verb 10.1093/acrefore/9780190228637.013.50
+    \endverb
+    \field{shorttitle}{Partisan Media and Polarization}
+    \field{title}{Partisan Media and Polarization: Challenges for Future Work}
+    \verb{url}
+    \verb http://politics.oxfordre.com/view/10.1093/acrefore/9780190228637.001.
+    \verb 0001/acrefore-9780190228637-e-50
+    \endverb
+    \field{langid}{english}
+    \verb{file}
+    \verb Snapshot:C\:\\Users\\david\\Zotero\\storage\\5QJXW57E\\acrefore-97801
+    \verb 90228637-e-50.html:text/html
+    \endverb
+    \field{journaltitle}{Oxford Research Encyclopedia of Politics}
+    \field{day}{25}
+    \field{month}{01}
+    \field{year}{2017}
+    \field{urlday}{07}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{levendusky_does_2016}{article}{}
+    \name{author}{2}{}{%
+      {{hash=LM}{%
+         family={Levendusky},
+         familyi={L\bibinitperiod},
+         given={Matthew},
+         giveni={M\bibinitperiod},
+      }}%
+      {{hash=MN}{%
+         family={Malhotra},
+         familyi={M\bibinitperiod},
+         given={Neil},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \keyw{polarization, media coverage, perceptions of polarization}
+    \strng{namehash}{LMMN1}
+    \strng{fullhash}{LMMN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{L}
+    \field{sortinithash}{L}
+    \field{abstract}{%
+    The past decade has witnessed an explosion of interest in the partisan
+  polarization of the American electorate. Scholarly investigation of this
+  topic has coincided with the media’s portrayal of a polity deeply divided
+  along partisan lines. Yet little research so far has considered the
+  consequences of the media’s coverage of political polarization. We show
+  that media coverage of polarization increases citizens’ beliefs that the
+  electorate is polarized. Furthermore, the media’s depiction of a polarized
+  electorate causes voters to moderate their own issue positions but increases
+  their dislike of the opposing party. These empirical patterns are consistent
+  with our theoretical argument that polarized exemplars in journalistic
+  coverage serve as anti-cues to media consumers. Our findings have important
+  implications for understanding current and future trends in political
+  polarization.%
+    }
+    \verb{doi}
+    \verb 10.1080/10584609.2015.1038455
+    \endverb
+    \field{issn}{1058-4609}
+    \field{number}{2}
+    \field{pages}{283\bibrangedash 301}
+    \field{title}{Does Media Coverage of Partisan Polarization Affect Political
+  Attitudes?}
+    \verb{url}
+    \verb https://doi.org/10.1080/10584609.2015.1038455
+    \endverb
+    \field{volume}{33}
+    \verb{file}
+    \verb Snapshot:C\:\\Users\\david\\Zotero\\storage\\6X2P63WS\\10584609.2015.
+    \verb html:text/html
+    \endverb
+    \field{journaltitle}{Political Communication}
+    \field{day}{02}
+    \field{month}{04}
+    \field{year}{2016}
+    \field{urlday}{07}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{stroud_polarization_2010}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SN}{%
+         family={Stroud},
+         familyi={S\bibinitperiod},
+         given={Natalie},
+         giveni={N\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SN1}
+    \strng{fullhash}{SN1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{title}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{abstract}{%
+    Today, people can easily select media outlets sharing their political
+  predispositions, a behavior known as partisan selective exposure. Additional
+  research is needed, however, to better understand the causes and consequences
+  of partisan selective exposure. This study investigates the relationship
+  between partisan selective exposure and political polarization using data
+  from the National Annenberg Election Survey. Cross?sectional results show
+  strong evidence that partisan selective exposure is related to polarization.
+  Over?time analyses document that partisan selective exposure leads to
+  polarization. Some evidence supports the reverse causal direction, namely
+  that polarization leads to partisan selective exposure. Implications for the
+  study of media effects and normative implications?both positive and
+  negative?are discussed.%
+    }
+    \verb{doi}
+    \verb 10.1111/j.1460-2466.2010.01497.x
+    \endverb
+    \field{issn}{0021-9916}
+    \field{number}{3}
+    \field{pages}{556\bibrangedash 576}
+    \field{shortjournal}{Journal of Communication}
+    \field{title}{Polarization and Partisan Selective Exposure}
+    \verb{url}
+    \verb https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1460-2466.2010.0149
+    \verb 7.x
+    \endverb
+    \field{volume}{60}
+    \verb{file}
+    \verb Snapshot:C\:\\Users\\david\\Zotero\\storage\\KIFXB4VC\\j.1460-2466.20
+    \verb 10.01497.html:text/html
+    \endverb
+    \field{journaltitle}{Journal of Communication}
+    \field{day}{19}
+    \field{month}{08}
+    \field{year}{2010}
+    \field{urlday}{07}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
+
+  \entry{stroud_media_2008}{article}{}
+    \name{author}{1}{}{%
+      {{hash=SNJ}{%
+         family={Stroud},
+         familyi={S\bibinitperiod},
+         given={Natalie\bibnamedelima Jomini},
+         giveni={N\bibinitperiod\bibinitdelim J\bibinitperiod},
+      }}%
+    }
+    \strng{namehash}{SNJ1}
+    \strng{fullhash}{SNJ1}
+    \field{labelnamesource}{author}
+    \field{labeltitlesource}{shorttitle}
+    \field{sortinit}{S}
+    \field{sortinithash}{S}
+    \field{abstract}{%
+    Today, people have ample opportunity to engage in selective exposure, the
+  selection of information matching their beliefs. Whether this is occurring,
+  however, is a matter of debate. While some worry that people increasingly are
+  seeking out likeminded views, others propose that newer media provide an
+  increased opportunity for exposure to diverse views. In returning to the
+  concept of selective exposure, this article argues that certain topics, such
+  as politics, are more likely to inspire selective exposure and that research
+  should investigate habitual media exposure patterns, as opposed to single
+  exposure decisions. This study investigates whether different media types
+  (newspapers, political talk radio, cable news, and Internet) are more likely
+  to inspire selective exposure. Using data from the 2004 National Annenberg
+  Election Survey, evidence supports the idea that people’s political beliefs
+  are related to their media exposure—a pattern that persists across media
+  types. Over-time analyses suggest that people’s political beliefs motivate
+  their media use patterns and that cable news audiences became increasingly
+  politically divided over the course of the 2004 election.%
+    }
+    \verb{doi}
+    \verb 10.1007/s11109-007-9050-9
+    \endverb
+    \field{issn}{0190-9320, 1573-6687}
+    \field{number}{3}
+    \field{pages}{341\bibrangedash 366}
+    \field{shortjournal}{Polit Behav}
+    \field{shorttitle}{Media Use and Political Predispositions}
+    \field{title}{Media Use and Political Predispositions: Revisiting the
+  Concept of Selective Exposure}
+    \verb{url}
+    \verb https://link.springer.com/article/10.1007/s11109-007-9050-9
+    \endverb
+    \field{volume}{30}
+    \field{langid}{english}
+    \verb{file}
+    \verb Snapshot:C\:\\Users\\david\\Zotero\\storage\\VHA9AEFR\\s11109-007-905
+    \verb 0-9.html:text/html
+    \endverb
+    \field{journaltitle}{Political Behavior}
+    \field{day}{01}
+    \field{month}{09}
+    \field{year}{2008}
+    \field{urlday}{07}
+    \field{urlmonth}{04}
+    \field{urlyear}{2018}
+  \endentry
+\enddatalist
+\endinput

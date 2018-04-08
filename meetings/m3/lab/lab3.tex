@@ -1,0 +1,244 @@
+% !Rnw weave = knitr
+% !TEX TS-program = lualatex
+% !TEX encoding = UTF-8 Unicode
+
+\documentclass{article}\usepackage[]{graphicx}\usepackage[]{color}
+%% maxwidth is the original width if it is less than linewidth
+%% otherwise use linewidth (to make sure the graphics do not exceed the margin)
+\makeatletter
+\def\maxwidth{ %
+  \ifdim\Gin@nat@width>\linewidth
+    \linewidth
+  \else
+    \Gin@nat@width
+  \fi
+}
+\makeatother
+
+\definecolor{fgcolor}{rgb}{0.345, 0.345, 0.345}
+\newcommand{\hlnum}[1]{\textcolor[rgb]{0.686,0.059,0.569}{#1}}%
+\newcommand{\hlstr}[1]{\textcolor[rgb]{0.192,0.494,0.8}{#1}}%
+\newcommand{\hlcom}[1]{\textcolor[rgb]{0.678,0.584,0.686}{\textit{#1}}}%
+\newcommand{\hlopt}[1]{\textcolor[rgb]{0,0,0}{#1}}%
+\newcommand{\hlstd}[1]{\textcolor[rgb]{0.345,0.345,0.345}{#1}}%
+\newcommand{\hlkwa}[1]{\textcolor[rgb]{0.161,0.373,0.58}{\textbf{#1}}}%
+\newcommand{\hlkwb}[1]{\textcolor[rgb]{0.69,0.353,0.396}{#1}}%
+\newcommand{\hlkwc}[1]{\textcolor[rgb]{0.333,0.667,0.333}{#1}}%
+\newcommand{\hlkwd}[1]{\textcolor[rgb]{0.737,0.353,0.396}{\textbf{#1}}}%
+\let\hlipl\hlkwb
+
+\usepackage{framed}
+\makeatletter
+\newenvironment{kframe}{%
+ \def\at@end@of@kframe{}%
+ \ifinner\ifhmode%
+  \def\at@end@of@kframe{\end{minipage}}%
+  \begin{minipage}{\columnwidth}%
+ \fi\fi%
+ \def\FrameCommand##1{\hskip\@totalleftmargin \hskip-\fboxsep
+ \colorbox{shadecolor}{##1}\hskip-\fboxsep
+     % There is no \\@totalrightmargin, so:
+     \hskip-\linewidth \hskip-\@totalleftmargin \hskip\columnwidth}%
+ \MakeFramed {\advance\hsize-\width
+   \@totalleftmargin\z@ \linewidth\hsize
+   \@setminipage}}%
+ {\par\unskip\endMakeFramed%
+ \at@end@of@kframe}
+\makeatother
+
+\definecolor{shadecolor}{rgb}{.97, .97, .97}
+\definecolor{messagecolor}{rgb}{0, 0, 0}
+\definecolor{warningcolor}{rgb}{1, 0, 1}
+\definecolor{errorcolor}{rgb}{1, 0, 0}
+\newenvironment{knitrout}{}{} % an empty environment to be redefined in TeX
+
+\usepackage{alltt}
+\usepackage[backend=bibtex]{biblatex}
+\usepackage[utf8]{inputenc}
+\usepackage[georgian]{babel}
+\usepackage{geometry, graphicx}
+\usepackage{booktabs}
+\bibliographystyle{plain}
+\bibliography{biblm3}
+
+ % you must load Sweave with the `noae` option
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+}
+
+\title{ლაბორატორია 3: მასობრივი გამოკითხვის მონაცემთა დამუშავება R-გარემოში}
+\author{დავით სიჭინავა}
+\date{\today}
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\begin{document}
+
+
+
+% \SweaveOpts{concordance=TRUE}
+\maketitle
+\section*{საკითხები}
+\begin{itemize}
+\item მასობრივი გამოკითხვის მონაცემების წაკითხვა
+\item სიხშირის და შეუღლებული ცხრილები (კროსტაბულაცია)
+\item არითმეტიკული ოპერაციები
+\end{itemize}
+
+\section*{ინსტრუქციები:}
+
+\paragraph{}
+თანმიმდევრობით შეასრულეთ მითითებული ამოცანები. თქვენს .rmd ფაილს სახელწოდება მიანიჭეთ შემდეგი ფორმით: თქვენი გვარი\_lab3.rmd. მაგალითად:
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlstd{sichinava_lab3.Rmd}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+\section*{დავალების და მონაცემების აღწერა}
+
+\subsection*{}
+
+\href{http://caucasusbarometer.org/ge/nd2017ge/downloads/}{,,კავკასიის ბარომეტრის''} ვებსაიტიდან გადმოწერეთ ,,ეროვნული დემოკრატიული ინსტიტუტის'' (NDI) გამოკითხვის 2017 წლის დეკემბრის კვლევის კითხვარი და მონაცემთა ბაზა თქვენთვის \href{https://www.youtube.com/watch?v=89tH19TH3Z8}{მოსაწონ} ფორმატში (SPSS ან STATA). გახსენით ახალი ბლოკნოტი და ბაზის მონაცემები წაიკითხეთ $R$-ში. რომელი ბიბლიოთეკა დაგჭირდებათ ამ მიზნით?
+
+წინამდებარე დავალების მიზანია, შეაფასოს, თუ რა კავშირშია ერთმანეთთან საქართველოში მოსახლეობის პოლიტიკური შეხედულებები და მათი დამოკიდებულება სხვადასხვა მედიასაშუალებებისადმი. პოლიტიკური კომუნიკაციების დისციპლინაში კვლევების მთელი სპექტრი არსებობს, რომლებიც ამტკიცებენ, რომ პარტიული შეხედულებების მქონე ადამიანები სულ უფრო ხშირად ირჩევენ ახალი ამბების ისეთ წყაროებს, რომლებიც მათ დამოკიდებულებებთან ყველაზე ახლოს დგანან \cite{levendusky_partisan_2017} \cite{boxell_is_2017} \cite{levendusky_does_2016} \cite{stroud_media_2008}
+ \cite{stroud_polarization_2010}. შესაბამისად, მსგავსი ტიპის ე.წ. Echo Chamber ამომრჩეველთა კიდევ უფრო მეტ პოლარიზაციას უწყობს ხელს. ,,ეროვნული დემოკრატიული ინსტიტუტის" გამოკითხვა საშუალებას გვაძლევს, ამ მოვლენას ქართველი ამომრჩევლების მაგალითზეც დავაკვირდეთ. დავალების ამოცანაა, პარტიული კუთვნილების მიხედვით გავაანალიზოთ, თუ რომელ მედია-საშუალებებს ენდობიან საქართველოს მცხოვრებლები, რომლებსაც ჩამოყალიბებული პარტიული შეხედულებები გააჩნიათ.
+
+მართალია, ჩვენს ბაზაში ცვლადებს სტანდარტიზებული სახელები ჰქვიათ, თუმცა დავალების ტექსტში მითითებული მაქვს კითხვარში მათი შესაბამისი ნომრები, ასე, რომ კითხვის პოვნა არა მგონია, გაგიჭირდეთ. წინამდებარე დავალებისთვის დაგვჭირდება ცვლადები $PARTYSUPP1$, $AGEGROUP$, $RESPSEX$, $SETTYPE$, $SUBSTRATUM$, $TRUIMEDI$, $TRUR2$, $RESPEDU$. ცხრილში \ref{tabledef} წარმოდგენილია ცვლადების დახასიათება და მათი შესაბამისი ნომრები კითხვარში.
+
+\begin{table}[]
+\centering
+\caption{ცვლადების განმარტება}
+\label{tabledef}
+\begin{tabular}{@{}lll@{}}
+\toprule
+ცვლადი     & კითხვის ნომერი კითხვარში & განმარტება                                                                            \\ \midrule
+PARTYSUPP1 & 54                       & \begin{minipage}{2in}{შეხედულებებთან ახლოს მყოფი პარტია: პირველი არჩევანი}\end{minipage}                                 \\
+TRUIMEDI   & 19                       & \begin{minipage}{2in}ენდობა ,,იმედს" პოლიტიკის და მიმდინარე მოვლენების შესახებ ინფორმაციის მისაღებად\end{minipage}       \\
+TRUR2      & 19                       & \begin{minipage}{2in}ენდობა ,,რუსთავი 2-ს" პოლიტიკის და მიმდინარე მოვლენების შესახებ ინფორმაციის მისაღებად\end{minipage} \\
+RESPEDU    & 63                       & განათლების უმაღლესი საფეხური                                                          \\
+AGEGROUP   & \emph{დემოგრაფია}      & ასაკობრივი ჯგუფი                                                                      \\
+SETTYPE    & \emph{დემოგრაფია}      & დასახლებული პუნქტის ტიპი                                                              \\ \bottomrule
+\end{tabular}
+\end{table}
+
+სანამ მონაცემთა ანალიზზე გადავალთ, საჭიროა მონაცემების გარდაქმნა. გამოიტანეთ ცვლად $PARTYSUPP1$-ის ცხრილი. ქართული პოლიტიკური ლანდშაფტის მრავალფეროვნებიდან გამომდინარე, ამ ცვლადშიც საკმაო სიჭრელე შეინიშნება, ამიტომ ანალიზისთვის აჯობებს, მსხვილი პარტიები და პასუხის ვარიანტები (,,ქართული ოცნება'', ,,ნაციონალური მოძრაობა'', ,,არ ვიცი'', ,,უარი პასუხზე'', ,,არცერთი'') ცალ-ცალკე კატეგორიებად გამოვყოთ, ხოლო დანარჩენი პარტიები დავაჯგუფოთ კატეგორიაში $other$. გაითვალისწინეთ, რომ ნებისმიერი კატეგორიული ცვლადი \emph{ფაქტორად} უნდა აქციოთ, ანუ - შესაბამისი პასუხის ვარიანტებიც უნდა მიანიჭოთ.  ყურადღება მიაქციეთ იმასაც, რომ ჩვენს ბაზაში კოდები $-9$ და $-3$ სტანდარტულია და აღნიშნავს გამოტოვებულ პასუხებს. შესაბამისად, ეს კატეგორიები უმჯობესია, $NA$-ად გადავაკეთოთ.
+
+ანალოგიურად მოიქეცით განათლების შემთხვევაში. პასუხის ვარიანტები დააჯგუფეთ სამ კატეგორიად: საშუალო ან უფრო დაბალი, საშუალო ტექნიკური, სრული ან არასრული უმაღლესი. განათლების ცვლადიც ფაქტორი უნდა იყოს.
+
+ცვლადები $TRUIMEDI$ და $TRUR2$ ე.წ. ბინარული ცვლადებია, სადაც 1 აღნიშნავს, რომ რესპონდენტი ენდობა ტელეარხს. ჩვენი ანალიზისთვის უმჯობესია, რომ სხვა პასუხის ვარიანტები 0-ად გადავაკეთოთ, პასუხის ვარიანტს 1 დავარქვათ "Mentioned", 0 - "Not Mentioned" და შესაბამისად, გავაფაქტოროთ.
+
+რაც შეეხებათ ცვლადებს $RESPSEX$, $AGEGROUP$, $SETTYPE$, მათი კოდების შესაბამისი პასუხის ვარიანტებია:
+
+\begin{itemize}
+\item{AGEGROUP: 1- 18-35, 2 - 36-55, 3 - 56+}
+\item{SETTYPE: 1- თბილისი, 2 - ქალაქები, 3 - სოფლები, 4 - ეთნიკური უმცირესობები}
+\end{itemize}
+
+ეს თითოეული ცვლადიც აქციეთ ფაქტორად და მიანიჭეთ შესაბამისი მნიშვნელობები
+
+\section*{სიხშირის ცხრილების აგება}
+
+ააგეთ ამ თითოეული ცვლადის ცხრილი $table$ ფუნქციის გამოყენებით. როგორც ხედავთ, შედეგებში მოცემულია \emph{აბსოლუტური} სიხშირე, ანუ თითოეულ კატეგორიაში რესპონდენტთა რაოდენობა. იმისთვის, რათა გამოვიტანოთ \emph{ფარდობითი სიხშირე}, საჭიროა, $table$-თან ერთად, გამოვიყენოთ $prop.table$ ფუნქციაც:
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{prop.table}\hlstd{(}\hlkwd{table}\hlstd{(ndidec}\hlopt{$}\hlstd{SETTYPE))}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+როგორც მიხვდით, მაგალითში ndidec ჩემი ცხრილის სახელწოდებაა. როგორც ვხედავთ, ცხრილების აგება საკმაოდ მარტივი ამოცანაა. როდესაც საქმე მასობრივ გამოკითხვასთან გვაქვს, როგორც წესი, მონაცემები \emph{შეწონილია}, ანუ კორექტირებულია მოსახლეობის პარამეტრების მიხედვით. მაგალითად, როგორც წესი, გამოკითხვებში ოდნავ უფრო მეტად არიან ქალები წარმოდგენილნი. იმის მიხედვით, თუ ქალების როგორი განაწილებაა მოსახლეობაში, მკვლევარს შეუძლია, მათ პასუხებს უფრო ნაკლები კოეფიციენტი მიანიჭოს, ვიდრე - მამაკაცებისას, რათა კვლევის შედეგები მეტნაკლებად ასახავდეს დემოგრაფიულ სტრუქტურას. $xtabs$ ფუნქციის გამოყენებით, მარტივად შეგვიძლია, გამოვთვალოთ შეწონილი პროპორციები. 
+
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{xtabs}\hlstd{(WTIND}\hlopt{~}\hlstd{party,} \hlkwc{data}\hlstd{=ndidec,} \hlkwc{na.action} \hlstd{=} \hlstr{"na.omit"}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+$xtabs$ ფუნქციაში $~$ ამ ნიშნამდე (ტილდამდე) ვწერთ წონის ცვლადს, ტილდის შემდეგ - ვუთითებთ ჩვენთვის საინტერესო ცვლადს, შემდეგ - მონაცემთა ცხრილის სახელწოდებას, დაბოლოს, $R$-ს ვატყობინებთ, რომ ცარიელი მნიშვნელობები თუ შეხვდა, გამოტოვოს.
+
+როგორც ხედავთ, ეს \href{https://www.youtube.com/watch?v=-E1LTc260g0}{ჩვეულებრივი ოპერაციაა}. ასევე მარტივად შეგვიძლია, გამოვთვალოთ შეწონილი მონაცემების ფარდობითი პროპორციის ცხრილიც, $prop.table$ ფუნქციის გამოყენებით:
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{prop.table}\hlstd{(}\hlkwd{xtabs}\hlstd{(WTIND}\hlopt{~}\hlstd{party,} \hlkwc{data}\hlstd{=ndidec,} \hlkwc{na.action} \hlstd{=} \hlstr{"na.omit"}\hlstd{))}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+
+\section*{კროსტაბულაციის ცხრილების აგება}
+
+კროსტაბულაციები, ანუ \href{http://dictionary.css.ge/content/contingency-table}{ნიშანთა შეუღლების ცხრილები} აღწერითი სტატისტიკური ანალიზის საკმაოდ მოხერხებული მეთოდია. ასეთი ცხრილები საშუალებას გვაძლევს, მონაცემები შევაჯამოთ ჯგუფების მიხედვით, მაგალითად - როგორაა განაწილებული პარტიული კუთვნილება ასაკობრივ ჯგუფებში და ა.შ.
+
+მარტივი კროსტაბულაციის აგება $table$ ფუნქციითაცაა შესაძლებელი. მაგალითისთვის, თუ გვაინტერესებს, დასახლებული პუნქტის ტიპის მიხედვით პარტიული კუთვნილების გაანალიზება, უნდა გამოვიყენოთ შემდეგი სინტაქსი:
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{table}\hlstd{(ndidec}\hlopt{$}\hlstd{party, ndidec}\hlopt{$}\hlstd{SETTYPE)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+ჯერ ვწერთ იმ ცვლადს, რომლის სიხშირეც გვაინტერესებს, ხოლო შემდეგ - იმ ცვლადს, რომლის კატეგორიების მიხედვითაც უნდა დავითვალოთ სიხშირეები. როგორც ხედავთ, შედეგში წარმოდგენილია აბსოლუტური სიხშირეები. ჩვენ კი \emph{სვეტების მიხედვით} პროპორციები გვჭირდება. ამიტომ, ისევ უნდა მივმართოთ $prop.table$ ფუნქციას:
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{prop.table}\hlstd{(}\hlkwd{table}\hlstd{(ndidec}\hlopt{$}\hlstd{party, ndidec}\hlopt{$}\hlstd{SETTYPE),} \hlnum{1}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+სინტაქსში რიცხვი 1 მიუთითებს, რომ პროპორციები გამოთვლილია \emph{სვეტების მიხედვით}. თუ 2 ეწერებოდა, მაშინ პროგრამა პროპორციებს \emph{რიგების მიხედვით} დაითვლიდა, თუ საერთოდ არაფერს მიუთითებდით, მაშინ 100%-ად აიღებდა \emph{მთელი ცხრილის} მონაცემებს.
+
+მსგავსად სიხშირისა, კროსტაბულაციაც შეგვიძლია, შევწონოთ. ამისთვის ვიყენებთ ფუნქციას $xtabs$:
+
+\begin{knitrout}
+\definecolor{shadecolor}{rgb}{0.969, 0.969, 0.969}\color{fgcolor}\begin{kframe}
+\begin{alltt}
+\hlkwd{prop.table}\hlstd{(}\hlkwd{xtabs}\hlstd{(WTIND}\hlopt{~}\hlstd{party}\hlopt{+}\hlstd{SETTYPE,} \hlkwc{data}\hlstd{=ndidec,} \hlkwc{na.action} \hlstd{=} \hlstr{"na.omit"}\hlstd{),} \hlnum{1}\hlstd{)}
+\end{alltt}
+\end{kframe}
+\end{knitrout}
+
+$xtabs$ ფუნქციაში $~$ ამ ნიშნამდე (ტილდამდე) ვწერთ წონის ცვლადს, ტილდის შემდეგ - ვუთითებთ რიგის და სვეტის აღმნიშვნელ ცვლადებს, შემდეგ - მონაცემთა ცხრილის სახელწოდებას. რადგან საბოლოო ჯამში, ჰორიზონტალური პროპორციები გვაინტერესებს, ვუთითებთ $prop.table$-ს და რიცხვ 1-ს. თუ ცარიელი მნიშვნელობების გამოტოვება გვსურს, დავამატებთ $na.action = "na.omit"$
+
+\section*{მონაცემთა ანალიზი}
+
+პირველ რიგში, გამოიტანეთ თქვენს მიერ შექმნილი და დამუშავებული ცვლადების \emph{შეწონილი} სიხშირეები. ძალიან კარგი, ახლა, ეცადეთ, უპასუხოთ, ქვემოთ ჩამოთვლილ კითხვებს:
+
+\begin{itemize}
+\item{როგორია პარტიული კუთვნილება დასახლებული პუნქტების ტიპის მიხედვით?}
+\item{როგორია პარტიული კუთვნილება ასაკობრივი ჯგუფების მიხედვით?}
+\item{როგორია ,,რუსთავი 2-ის'' და ,,იმედის'' ნდობა განათლების დონის მიხედვით?}
+\item{\emph{მოსახლეობის} რა ნაწილია, რომელიც პოლიტიკური ინფორმაციის მისაღებად ენდობა როგორც ,,რუსთავი 2-ს'', ასევე - ,,იმედს''?}
+\item{როგორია პარტიული კუთვნილების განაწილება იმ მოსახლეობაში, რომელიც ენდობა ,,რუსთავი 2-ს''?}
+\item{როგორია პარტიული კუთვნილების განაწილება იმ მოსახლეობაში, რომელიც ენდობა ,,იმედს''?}
+\begin{itemize}
+
+
+\subsection*{\href{https://www.youtube.com/watch?v=TIduFwSp29M}{ეს რა იყო?} როგორ ჩავაბარო?!}
+
+დაზიპეთ ფოლდერი და დაარქვით სახელი შემდეგი ფორმატით: $surname\_lab3.zip$.
+
+ატვირთეთ თქვენი დავალება \href{https://www.dropbox.com/request/LhDYEJjQZQRW0DgdeoS2}{ამ ლინკზე} მომდევნო შეხვედრის დაწყებამდე.
+
+
+წარმატებები!
+
+\printbibliography   
+
+\end{document}
