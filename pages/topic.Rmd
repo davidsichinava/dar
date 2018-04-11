@@ -66,4 +66,28 @@ output: html_document
 * [ლაბორატორიული დავალება](https://www.dropbox.com/s/96ezsciso3az13g/lab3.pdf?dl=0)
 * დავალება ატვირთეთ [ამ ლინკზე](https://www.dropbox.com/request/LhDYEJjQZQRW0DgdeoS2)
 
+### თემა 4: მიზეზშედეგობრიობა; ექსპერიმენტული და კვაზიექსპერიმენტული დიზაინი
+#### ![](ico/teacher.png) ლექცია:
+
+- მიზეზშედეგობრიობა
+	+ მიზეზშედეგობრივი ეფექტები
+	+ ჰიპოთეტური ფაქტი (counterfactual)
+- რანდომიზებული კონტროლირებული ექსპერიმენტები
+- კვაზიექსპერიმენტული დიზაინები
+	+ ,,საწყისი და შემდგომი დიზაინი'' (Before-and-after design)
+	+ ,,სხვაობათა სხვაობა'' (Difference-in-Difference)
+
+
+	
+![](ico/open-book.png) საკითხავი მასალა:
+
+* QSS, თავი 2, სექცია 2.1-2.7
+
+* <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
+<a href="https://davidsichinava.github.io/introstatsr/pages/m4/pres/meeting_4.html">პრეზენტაცია</a>
+* [ლაბორატორიული დავალება](https://www.dropbox.com/s/4kwc7d5x02iyxe5/lab4.pdf?dl=0)
+* დავალება ატვირთეთ [ამ ლინკზე](https://www.dropbox.com/request/A6dJZPAgkwRKgfTWtgzg)
+* ანოტირებული ბიბლიოგრაფია: Holland, P. (1986) [Statistics and Causal Inference](https://www.dropbox.com/s/u4qjvf9swowl09q/Holland1986.pdf?dl=0). _Journal of the American Statistical Association, Vol. 81, No. 396_
+
+
 
