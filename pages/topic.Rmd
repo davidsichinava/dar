@@ -49,7 +49,7 @@ output: html_document
 	+ მონაცემთა ჩარჩო
 * [ბლოკნოტი საკლასო სამუშაოს სკრიპტით](https://www.dropbox.com/s/2xhprzisunzg2ba/meeting2.Rmd?dl=0)
 * <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
-<a href="https://davidsichinava.github.io/introstatsr/pages/m2/pres/meeting_2.html">პრეზენტაცია</a>
+<a href="https://davidsichinava.github.io/dar/meetings/m2/pres/meeting_2.html">პრეზენტაცია</a>
 * [ლაბორატორიული დავალება](https://www.dropbox.com/s/bhrmma379ihen9o/lab2.pdf?dl=0)
 * დავალება ატვირთეთ [ამ ლინკზე](https://www.dropbox.com/request/sl2iimmayEq1Ym3f95zf)
 
@@ -62,7 +62,7 @@ output: html_document
 
 
 * <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
-<a href="https://davidsichinava.github.io/introstatsr/pages/m3/pres/meeting_3.html">პრეზენტაცია</a>
+<a href="https://davidsichinava.github.io/dar/meetings/m3/pres/meeting_3.html">პრეზენტაცია</a>
 * [ლაბორატორიული დავალება](https://www.dropbox.com/s/96ezsciso3az13g/lab3.pdf?dl=0)
 * დავალება ატვირთეთ [ამ ლინკზე](https://www.dropbox.com/request/LhDYEJjQZQRW0DgdeoS2)
 
@@ -78,16 +78,31 @@ output: html_document
 	+ ,,სხვაობათა სხვაობა'' (Difference-in-Difference)
 
 
-	
 ![](ico/open-book.png) საკითხავი მასალა:
 
 * QSS, თავი 2, სექცია 2.1-2.7
 
 * <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
-<a href="https://davidsichinava.github.io/introstatsr/pages/m4/pres/meeting_4.html">პრეზენტაცია</a>
+<a href="https://davidsichinava.github.io/dar/meetings/m4/pres/meeting_4.html">პრეზენტაცია</a>
 * [ლაბორატორიული დავალება](https://www.dropbox.com/s/4kwc7d5x02iyxe5/lab4.pdf?dl=0)
 * დავალება ატვირთეთ [ამ ლინკზე](https://www.dropbox.com/request/A6dJZPAgkwRKgfTWtgzg)
 * ანოტირებული ბიბლიოგრაფია: Holland, P. (1986) [Statistics and Causal Inference](https://www.dropbox.com/s/u4qjvf9swowl09q/Holland1986.pdf?dl=0). _Journal of the American Statistical Association, Vol. 81, No. 396_
 
+### თემა 5: განუსაზღვრელობის შეფასება
+#### ![](ico/teacher.png) ლექცია:
+
+* განუსაზღვრელობა
+	+ შეფასება
+	+ ჰიპოთეზის შემოწმება
+* ერთი და ორი შერჩევის t-კრიტერიუმის ტესტი
+* სტატისტიკური სიმძლავრე
+
+
+![](ico/open-book.png) საკითხავი მასალა:
+
+* QSS, თავი 7, სექცია 7.1-7.3
+
+* <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
+<a href="https://davidsichinava.github.io/dar/meetings/m5/pres/meeting_5.html">პრეზენტაცია</a>
 
 
