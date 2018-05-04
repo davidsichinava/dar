@@ -106,3 +106,10 @@ output: html_document
 <a href="https://davidsichinava.github.io/dar/meetings/m5/pres/meeting_5.html">პრეზენტაცია</a>
 
 
+### თემა 6: მონაცემთა ვიზუალიზაცია სოციალურ მეცნიერებებში
+
+
+* <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
+<a href="https://davidsichinava.github.io/dar/meetings/m6/pres/meeting_6.html">პრეზენტაცია</a>
+* საკლასო სამუშაოს [კოდი](https://www.dropbox.com/s/unc9g8r3ir0vwqp/class.R?dl=0)
+
