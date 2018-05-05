@@ -122,4 +122,4 @@ output: html_document
 * <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
 <a href="https://davidsichinava.github.io/dar/meetings/m7/pres/meeting_7.html">პრეზენტაცია</a>
 * საკლასო სამუშაოს [კოდი](https://www.dropbox.com/s/64npp8jfmgk6meb/class.R?dl=0)
-
+* [ლაბორატორიული დავალება](https://www.dropbox.com/s/jj821epf4j8wd5c/lab5.pdf?dl=0)

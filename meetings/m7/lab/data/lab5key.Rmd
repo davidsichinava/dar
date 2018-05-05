@@ -88,7 +88,7 @@ table(idahot$education)
 
 ```{r}
 
-cor(idahot$d16_index, idahot$d2,method="spearman",use="complete.obs")
+  cor(idahot$d16_index, idahot$d2,method="spearman",use="complete.obs")
 
 cor(idahot$d16_index, idahot$minorities,method="spearman",use="complete.obs")
 
