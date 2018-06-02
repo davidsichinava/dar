@@ -124,7 +124,7 @@ output: html_document
 * საკლასო სამუშაოს [კოდი](https://www.dropbox.com/s/64npp8jfmgk6meb/class.R?dl=0)
 * [ლაბორატორიული დავალება](https://www.dropbox.com/s/jj821epf4j8wd5c/lab5.pdf?dl=0)
 
-### თემა 8: მარტივი და მრავალწევრი წრფივი რეგრესია უმცირეს კვადრატთა მეთოდით. რეგრესიის დიაგნოსტიკა
+### თემა 8: მარტივი წრფივი რეგრესია უმცირეს კვადრატთა მეთოდით
 
 ![](ico/open-book.png) საკითხავი მასალა:
 
@@ -133,4 +133,26 @@ output: html_document
 * <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
 <a href="https://davidsichinava.github.io/dar/meetings/m8/pres/meeting_8.html">პრეზენტაცია</a>
 * საკლასო სამუშაოს [კოდი და მონაცემთა ბაზები](https://www.dropbox.com/s/g60qnehvr59cia6/class8code.zip?dl=0)
+
+### თემა 9: რეგრესიის დიაგნოსტირება. მრავლობითი წრფივი რეგრესია. ექსპერიმენტის ანალიზი რეგრესიის მეშვეობით
+
+* <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
+<a href="https://davidsichinava.github.io/dar/meetings/m9/pres/meeting_9.html">პრეზენტაცია</a>
+
+### თემა 10: კვლევის იდეიდან რეგრესიულ მოდელებამდე
+
+* <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
+<a href="https://davidsichinava.github.io/dar/meetings/m10/pres/meeting_10.html">პრეზენტაცია</a>
+* საკლასო სამუშაოს [კოდი და მონაცემთა ბაზები](https://www.dropbox.com/s/xuw8nbh48ol50kw/class10data.zip?dl=0)
+
+### თემა 11: მონაცემთა შემცირების ტექნიკები: ფაქტორული ანალიზი და პრინციპულ (მთავარ) კომპონენტთა ანალიზი)
+
+![](ico/open-book.png) საკითხავი მასალა:
+
+* DIS, თავი 17, სექცია 17.1-17.9
+
+
+* <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
+<a href="https://davidsichinava.github.io/dar/meetings/m11/pres/meeting_11.html">პრეზენტაცია</a>
+* საკლასო სამუშაოს [კოდი და მონაცემთა ბაზები](https://www.dropbox.com/s/5xjfdmqldmybkzw/class11.zip?dl=0)
 

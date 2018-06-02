@@ -824,6 +824,7 @@ hljs.initHighlightingOnLoad();
 <div class="slideContent" >
 <ul>
 <li>წრფივი რეგრესიის დიაგნოსტირება</li>
+<li>რეგრესია და რანდომიზებული ექსპერიმენტების ანალიზი</li>
 <li>მრავლობითი წრფივი რეგრესია</li>
 </ul>
 
@@ -855,45 +856,10 @@ hljs.initHighlightingOnLoad();
 
 </section>
 <section data-transition="none" data-transition-speed="default">
-<h3>დეტერმინაციის კოეფიციენტი:</h3>
+<h3>მაგალითი წინა ლექციიდან: სახის გამომეტყველება და საარჩევნო წარმატება</h3>
 <div class="slideContent" >
-<pre><code class="r">florida &lt;- read.csv(&quot;florida.csv&quot;)
-fit2 &lt;- lm(Buchanan00 ~ Perot96, data = florida)
-fit2
-</code></pre>
-
-</div>
-
-</section>
-<section data-transition="none" data-transition-speed="default">
-<h3>დეტერმინაციის კოეფიციენტი:</h3>
-<div class="slideContent" >
-<pre><code class="r">fit2summary &lt;- summary(fit2)
-fit2summary$r.squared
-</code></pre>
-
-</div>
-
-</section>
-<section data-transition="none" data-transition-speed="default">
-<h3>გავლენიანი ჩანაწერები:</h3>
-<div class="slideContent" >
-<pre><code class="r">plot(fitted(fit2), resid(fit2), xlim = c(0, 1500), ylim = c(-750, 2500),
-xlab = &quot;Fitted values&quot;, ylab = &quot;Residuals&quot;)
-abline(h = 0)
-florida$county[resid(fit2) == max(resid(fit2))]
-</code></pre>
-
-</div>
-
-</section>
-<section data-transition="none" data-transition-speed="default">
-<h3>გავლენიანი ჩანაწერები:</h3>
-<div class="slideContent" >
-<pre><code class="r">florida.pb &lt;- subset(florida, subset = (county != &quot;PalmBeach&quot;))
-fit3 &lt;- lm(Buchanan00 ~ Perot96, data = florida.pb)
-fit3
-R2(fit3)
+<pre><code class="r">fit &lt;- lm(diff.share ~ d.comp, data = face) # fit the model
+fit
 </code></pre>
 
 </div>
@@ -902,9 +868,12 @@ R2(fit3)
 <section data-transition="none" data-transition-speed="default">
 <h3>უკიდურესი წერტილები</h3>
 <div class="slideContent" >
-<pre><code class="r">outlierTest(fit)
-qqPlot(fit, main=&quot;QQ Plot&quot;)
-leveragePlots(fit)
+<ul>
+<li>outlierTest გვიჩვენებს, თუ მერამდენე ჩანაწერია ყველაზე ,,ექსტემალური&#39;&#39;, რომელიც დიდ გავლენას ახდენს მოდელის ხარისხზე</li>
+</ul>
+
+<pre><code class="r">library(car)
+outlierTest(fit)
 </code></pre>
 
 </div>
@@ -913,15 +882,23 @@ leveragePlots(fit)
 <section data-transition="none" data-transition-speed="default">
 <h3>გავლენიანი ჩანაწერები</h3>
 <div class="slideContent" >
-<pre><code class="r"># Influential Observations
-# added variable plots 
-av.Plots(fit)
-# Cook&#39;s D plot
-# identify D values &gt; 4/(n-k-1) 
-cutoff &lt;- 4/((nrow(face)-length(fit$coefficients)-2)) 
-plot(fit, which=4, cook.levels=cutoff)
-# Influence Plot 
-influencePlot(fit,  id.method=&quot;identify&quot;, main=&quot;Influence Plot&quot;, sub=&quot;Circle size is proportial to Cook&#39;s Distance&quot; )
+<ul>
+<li>leveragePlots გვიჩვენებს, თუ რომელი ჩანაწერები ,,ექაჩებიან&#39;&#39;  მოდელს, რაც იმაზე მიგვითითებს, რომ რეგრესიის წრფე ამ შემთხვევების გავლენით, ოპტიმალურისგან შორს მდებარეობს.</li>
+</ul>
+
+<pre><code class="r">leveragePlots(fit)
+</code></pre>
+
+<pre><code class="r"># კუკის მანძილის დიაგრამები
+# D მნიშვნელობის განსაზღვრა &gt; 4/(n-k-1) 
+cutoff &lt;- 4/((nrow(face)-length(fit$coefficients)-2))
+</code></pre>
+
+<ul>
+<li>ამ შემთხვევაში, ჩვენი ამოცანაა, პოტენციური პრობლემის აღმოსაფხვრელად შევისწავლოთ ყველა ის ჩანაწერი, რომელიც cutoff მნიშვნელობას აღემატება.</li>
+</ul>
+
+<pre><code class="r">plot(fit, which=4, cook.levels=cutoff)
 </code></pre>
 
 </div>
@@ -931,33 +908,31 @@ influencePlot(fit,  id.method=&quot;identify&quot;, main=&quot;Influence Plot&qu
 <h3>ცდომილებათა ნორმალურობა</h3>
 <div class="slideContent" >
 <ul>
-<li>MASS ბიბლიოთეკის გამოყენებით</li>
+<li>გარდა ზემოთ აღწერილი მეთოდისა, ცდომილებათა ნორმალურობის შესწავლა შესაძლებელია, თუ ნაწინასწარმეტყველებ ცდომილებებს ,,სტიუდენტიზაციას&#39;&#39; გავუკეთებთ, ანუ - მოვახდენთ მის სტანდარტიზაციას სტანდარტული გადახრის მეშვეობით. </li>
 </ul>
 
-<pre><code class="r"># Normality of Residuals
-# qq plot for studentized resid
-qqPlot(fit, main=&quot;QQ Plot&quot;)
-# distribution of studentized residuals
-library(MASS)
+<pre><code class="r">library(MASS)
 sresid &lt;- studres(fit) 
 hist(sresid, freq=FALSE, 
-   main=&quot;Distribution of Studentized Residuals&quot;)
-xfit&lt;-seq(min(sresid),max(sresid),length=40) 
-yfit&lt;-dnorm(xfit) 
-lines(xfit, yfit)
+   main=&quot;სტუდენტიზებული ცდომილებების განაწილება&quot;)
 </code></pre>
 
 </div>
 
 </section>
 <section data-transition="none" data-transition-speed="default">
-<h3>არამუდმივი ცდომილებათა დისპერსია</h3>
+<h3>არამუდმივ ცდომილებათა დისპერსია (ჰეტეროსკედასტურობა)</h3>
 <div class="slideContent" >
-<pre><code class="r"># Evaluate homoscedasticity
-# non-constant error variance test
-ncvTest(fit)
-# plot studentized residuals vs. fitted values 
-spreadLevelPlot(fit)
+<pre><code class="r">### ამ შემთხვევაში, უნდა გამოვიყენოთ lmtest ბიბლიოთეკა და ბრეუშ-პაგანის ტესტი
+bptest(fit)
+</code></pre>
+
+<ul>
+<li><p>ბრეუშ-პაგანის ტესტის ნულოვანი ჰიპოთეზა არის ის, რომ ცდომილებათად დისპერსია არ არის დამოკიდებული გარე ფაქტორებზე. შესაბამისად, თუ p-მნიშვნელობა მცირეა, ნულოვანი ჰიპოთზა უნდა უარვყოთ და ჩავთვალოთ, რომ ჩვენს მონაცემებს ჰომოსკედასტურობის პრობლემა აქვს.</p></li>
+<li><p>თუ მონაცემები ჰეტეროსკედასტურია, შესაბამისად, გამოთვლილი სტანდარტული შეცდომა არასწორია. პრობლემის აღმოსაფხვრელად როგორც წესი, ე.წ. რობასტულ (robust) რეგრესიულ მოდელებს იყენებენ</p></li>
+</ul>
+
+<pre><code>
 </code></pre>
 
 </div>
@@ -966,31 +941,24 @@ spreadLevelPlot(fit)
 <section data-transition="none" data-transition-speed="default">
 <h3>მულტიკოლინეარულობა</h3>
 <div class="slideContent" >
-<pre><code class="r">vif(fit) # variance inflation factors 
-sqrt(vif(fit)) &gt; 2 # problem?
+<ul>
+<li><p>მრავალწევრი რეგრესიული მოდელის ერთ-ერთი დაშვება არის ის, რომ დამოუკიდებელ ცვლადებს შორის წრფივი დამოკიდებულება არ უნდა იყოს, ან - მცირე დონეზე. თუმცა ეს პირობა ცხოვრებაში არასდროს სრულდება;</p></li>
+<li><p>მულტიკოლინეარულობის აღმოჩენის ყველაზე მარტივი ხერხი ამხსნელ ცვლადებს შორის კორელაციის გამოთვლაა. თუმცა ასევე შესაძლებელია ე.წ. დისპერსიის ინფლაციის მაჩვენებლის გამოთვლაა</p></li>
+</ul>
+
+<pre><code class="r">vif(fit) # დისპერსიის ინფლაციის ფაქტორი 
+sqrt(vif(fit)) &gt; 2 # პრობლემატური შემთხვევები
 </code></pre>
 
 </div>
 
 </section>
 <section data-transition="none" data-transition-speed="default">
-<h3>არაწრფივი დამოკიდებულება</h3>
+<h3>მულტიკოლინეარულობა</h3>
 <div class="slideContent" >
-<pre><code class="r"># Evaluate Nonlinearity
-# component + residual plot 
-crPlots(fit)
-# Ceres plots 
-ceresPlots(fit)
-</code></pre>
-
-</div>
-
-</section>
-<section data-transition="none" data-transition-speed="default">
-<h3>ცდომილებათა დამოუკიდებლობა</h3>
-<div class="slideContent" >
-<pre><code class="r">durbinWatsonTest(fit)
-</code></pre>
+<ul>
+<li>როგორ მოვაგვაროთ პრობლემა? საჭიროა, გადავხედოთ მოდელის ამხსნელ ცვლადებს და დავრწმუნდეთ, ერთმანეთთან კორელაციაში მყოფი ცვლადები ერთსა და იმავე ფენომენს ზომავენ. თუ თეორიული თვალსაზრისით ასეა, მაშინ შეგვიძლია, ერთ-ერთი რომელიმე ცვლადი რეგრესიული მოდელიდან ამოვიღოთ </li>
+</ul>
 
 </div>
 

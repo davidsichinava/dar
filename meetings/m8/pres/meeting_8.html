@@ -1021,118 +1021,30 @@ sqrt(mean(epsilon.hat^2)) # RMSE
 
 </section>
 <section data-transition="none" data-transition-speed="default">
+<h3>დეტერმინაციის კოეფიციენტი:</h3>
+<div class="slideContent" >
+<pre><code class="r">florida &lt;- read.csv(&quot;florida.csv&quot;)
+fit2 &lt;- lm(Buchanan00 ~ Perot96, data = florida)
+fit2
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="none" data-transition-speed="default">
+<h3>დეტერმინაციის კოეფიციენტი:</h3>
+<div class="slideContent" >
+<pre><code class="r">fit2summary &lt;- summary(fit2)
+fit2summary$r.squared
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="none" data-transition-speed="default">
 <h3>ბეტა-კოეფიციენტი:</h3>
 <div class="slideContent" >
 <p>\( \beta = corr(X, Y) * \frac{SD(Y)}{SD(X)} \)</p>
-
-</div>
-
-</section>
-<section data-transition="none" data-transition-speed="default">
-<h3>დაშვება:</h3>
-<div class="slideContent" >
-<ul>
-<li>წრფივი ურთიერთდამოკიდებულება</li>
-<li>ჰომოსკედასტურობა</li>
-<li>ცდომილებათა დამოუკიდებლობა</li>
-<li>ნორმალური განაწილება</li>
-</ul>
-
-</div>
-
-</section>
-<section data-transition="none" data-transition-speed="default">
-<h3>რას ვამოწმებთ:</h3>
-<div class="slideContent" >
-<ul>
-<li>უკიდურეს წერტილებს</li>
-<li>,,გავლენიან&#39;&#39; ჩანაწერებს</li>
-</ul>
-
-</div>
-
-</section>
-<section data-transition="none" data-transition-speed="default">
-<h3>უკიდურესი წერტილები</h3>
-<div class="slideContent" >
-<pre><code class="r">library(car)
-### outlierTest გვიჩვენებს, თუ მერამდენე ჩანაწერია ყველაზე ,,ექსტემალური&#39;&#39;, რომელიც დიდ გავლენას ახდენს მოდელის ხარისხზე
-outlierTest(fit)
-</code></pre>
-
-</div>
-
-</section>
-<section data-transition="none" data-transition-speed="default">
-<h3>გავლენიანი ჩანაწერები</h3>
-<div class="slideContent" >
-<pre><code class="r">### leveragePlots გვიჩვენებს, თუ რომელი ჩანაწერები ,,ექაჩებიან&#39;&#39;  მოდელს, რაც იმაზე მიგვითითებს, რომ რეგრესიის წრფე ამ შემთხვევების გავლენით, ოპტიმალურისგან შორს მდებარეობს.
-leveragePlots(fit)
-
-# კუკის მანძილის დიაგრამები
-# D მნიშვნელობის განსაზღვრა &gt; 4/(n-k-1) 
-cutoff &lt;- 4/((nrow(face)-length(fit$coefficients)-2))
-
-plot(fit, which=4, cook.levels=cutoff)
-# ამ შემთხვევაში, ჩვენი ამოცანაა, პოტენციური პრობლემის აღმოსაფხვრელად შევისწავლოთ ყველა ის ჩანაწერი, რომელიც cutoff მნიშვნელობას აღემატება.
-</code></pre>
-
-</div>
-
-</section>
-<section data-transition="none" data-transition-speed="default">
-<h3>ცდომილებათა ნორმალურობა</h3>
-<div class="slideContent" >
-<ul>
-<li>MASS ბიბლიოთეკის გამოყენებით</li>
-</ul>
-
-<pre><code class="r"># გარდა ზემოთ აღწერილი მეთოდისა, ცდომილებათა ნორმალურობის შესწავლა შესაძლებელია, თუ ნაწინასწარმეტყველებ ცდომილებებს ,,სტიუდენტიზაციას&#39;&#39; გავუკეთებთ, ანუ - მოვახდენთ მის სტანდარტიზაციას სტანდარტული გადახრის მეშვეობით. 
-
-library(MASS)
-sresid &lt;- studres(fit) 
-hist(sresid, freq=FALSE, 
-   main=&quot;სტუდენტიზებული ცდომილებების განაწილება&quot;)
-</code></pre>
-
-</div>
-
-</section>
-<section data-transition="none" data-transition-speed="default">
-<h3>არამუდმივ ცდომილებათა დისპერსია (ჰეტეროსკედასტურობა)</h3>
-<div class="slideContent" >
-<pre><code class="r">### ამ შემთხვევაში, უნდა გამოვიყენოთ lmtest ბიბლიოთეკა და ბრეუშ-პაგანის ტესტი
-bptest(fit)
-
-### ბრეუშ-პაგანის ტესტის ნულოვანი ჰიპოთეზა არის ის, რომ ცდომილებათად დისპერსია არ არის დამოკიდებული გარე ფაქტორებზე. შესაბამისად, თუ p-მნიშვნელობა მცირეა, ნულოვანი ჰიპოთზა უნდა უარვყოთ და ჩავთვალოთ, რომ ჩვენს მონაცემებს ჰომოსკედასტურობის პრობლემა აქვს.
-
-### თუ მონაცემები ჰეტეროსკედასტურია, შესაბამისად, გამოთვლილი სტანდარტული შეცდომა არასწორია. პრობლემის აღმოსაფხვრელად როგორც წესი, ე.წ. რობასტულ (robust) რეგრესიულ მოდელებს იყენებენ
-</code></pre>
-
-</div>
-
-</section>
-<section data-transition="none" data-transition-speed="default">
-<h3>მულტიკოლინეარულობა</h3>
-<div class="slideContent" >
-<ul>
-<li><p>მრავალწევრი რეგრესიული მოდელის ერთ-ერთი დაშვება არის ის, რომ დამოუკიდებელ ცვლადებს შორის წრფივი დამოკიდებულება არ უნდა იყოს, ან - მცირე დონეზე. თუმცა ეს პირობა ცხოვრებაში არასდროს სრულდება;</p></li>
-<li><p>მულტიკოლინეარულობის აღმოჩენის ყველაზე მარტივი ხერხი ამხსნელ ცვლადებს შორის კორელაციის გამოთვლაა. თუმცა ასევე შესაძლებელია ე.წ. დისპერსიის ინფლაციის მაჩვენებლის გამოთვლაა</p></li>
-</ul>
-
-<pre><code class="r">vif(fit) # დისპერსიის ინფლაციის ფაქტორი 
-sqrt(vif(fit)) &gt; 2 # პრობლემატური შემთხვევები
-</code></pre>
-
-</div>
-
-</section>
-<section data-transition="none" data-transition-speed="default">
-<h3>მულტიკოლინეარულობა</h3>
-<div class="slideContent" >
-<ul>
-<li>როგორ მოვაგვაროთ პრობლემა? საჭიროა, გადავხედოთ მოდელის ამხსნელ ცვლადებს და დავრწმუნდეთ, ერთმანეთთან კორელაციაში მყოფი ცვლადები ერთსა და იმავე ფენომენს ზომავენ. თუ თეორიული თვალსაზრისით ასეა, მაშინ შეგვიძლია, ერთ-ერთი რომელიმე ცვლადი რეგრესიული მოდელიდან ამოვიღოთ </li>
-</ul>
 
 </div>
 
