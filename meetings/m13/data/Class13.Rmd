@@ -1,0 +1,247 @@
+---
+title: "მესტვირიშვილი და სხვების (2016) რეპლიკაცია"
+author: "David Sichinava"
+date: "June 16, 2018"
+output: html_document
+---
+
+
+### მონაცემთა დამუშავება
+
+ცვლადების დეტალური აღწერა მოცემულია სტატიის (რომელიც შეგიძლიათ, [ამ ლინკიდან გადმოწეროთ](https://www.dropbox.com/s/4pho03fsl7m0aa1/MestvirishviliEtAl_2016.pdf?dl=0)) პირველ ცხრილში.
+
+#### დამოკიდებული ცვლადი:
+
+```{r}
+library(ggplot2)
+library(margins)
+library(dplyr)
+library(haven)
+
+setwd("D:\\Dropbox\\My Projects\\Courses\\ST_R\\website\\meetings\\m13\\data")
+
+may17 <- read_dta("May17_Only_responses_10072013.dta")
+
+
+```
+
+#### დამოუკიდებული ცვლადები:
+
+##### სქესი: 0 ქალი, 1 კაცი
+
+```{r}
+may17$sex <- may17$gender
+may17$sex[may17$sex==2] <- 0
+may17$sex <- factor(may17$sex, levels=c(0, 1), labels=c("Female", "Male"))
+table(may17$sex)
+
+```
+
+##### განათლება: 1 - საშუალო ან დაბალი, 2 - საშუალო სპეციალური, 3 - უმაღლესი
+
+```{r}
+may17$edu <- 0
+may17$edu[may17$d4>=4] <- 3
+may17$edu[may17$d4==3] <- 2
+may17$edu[may17$d4<3] <- 1
+may17$edu <- factor(may17$edu, levels=c(1, 2, 3), labels=c("Secondary or lower", "Vocational", "Higher"))
+table(may17$edu)
+```
+
+
+##### დასწრება რელიგიურ მსახურებაზე: 1 - კვირაში ერთხელ მაინც, 2 - თვეში ერთხელ მაინც, 3 - იშვიათად ან არასდროს
+
+```{r}
+may17$relig <- 0
+may17$relig[may17$d10==1] <- 1
+may17$relig[may17$d10==2] <- 2
+may17$relig[may17$d10>2] <- 3
+may17$relig <- factor(may17$relig, levels=c(1, 2, 3), labels=c("Once a week", "Once a month", "Rarely or never"))
+table(may17$relig)
+```
+
+##### ლიბერალური დამოკიდებულებები
+
+ანალიზისთვის ლიბერალური დამოკიდებულებები გაზომილია ექვსელემენტიანი სკალის მეშვეობით, რომლის მიხედვითაც რესპონდენტებს უნდა შეეფასებინათ, თუ რამდენად მისაღები ან მიუღებელი იყო მაგალითად, მამაკაცისთვის საყურის ტარება, პირსინგი და ა.შ. დეტალურად კითხვის ფორმულირება და ვარიანტები ნახეთ კითხვარის D16 სექციაში.
+
+მკვლევრებმა ლიბერალური დამოკიდებულების ცვლადის გამოსაყვანად გამოიყენეს ფაქტორული ანალიზი, ხოლო ვარიანტები "არ ვიცი" და "უარი" სავარაუდოდ, ცარიელ მნიშვნელობებადაა გადაკეთებული. თუმცა მოდი, ჩვენ ისინი ნეიტრალურ კატეგორიას (1-ზოგერ) მივუერთოთ.
+
+```{r}
+recodeD16 <- function(x) {
+	x <- dplyr::recode(x, `0`=0, `1`=1, `2`=2, `-1`=1, `-2`=1, `-3`=0)
+
+}
+
+may17[] <- lapply(may17, unclass)
+
+vars <- c("d16_1", "d16_2", "d16_3", "d16_4", "d16_5", "d16_6")
+
+may17[, vars] <- sapply(may17[, vars], recodeD16)
+
+#### ფაქტორული ანალიზი:
+
+liberalismFactor <- factanal(na.exclude(may17[, vars]), 
+                      3, rotation="varimax", scores="regression")
+
+
+print(liberalismFactor, digits=2, cutoff=0.4, sort=TRUE)
+
+
+```
+
+როგორც ვხედავთ, ე.წ. ფაქტორული loading-ი მხოლოდ პირველ ფაქტორსაა. ამასთან, ეს პირველი ფაქტორი, როგორც ჩანს დაკავშირებულია D16-ის პირველ, მეორე და მესამე კითხვებთან. ლიბერალიზმის ცვლადი იქნება სწორედ ამ პირველი ფაქტორის პროგნოზირებული მნიშვნელობა:
+
+```{r}
+
+may17$liberalism <- liberalismFactor$scores[, 1]
+
+```
+
+
+##### ბინარული ცვლადების კოდირება
+
+რადგან რამდენიმე დამოკიდებული ცვლადი ბინარულია (ე.ი. - დიახ/არა ტიპის), შეგვიძლია, მათი კოდირებისთვის ერთი ფუნქცია გამოვიყენოთ:
+
+```{r}
+
+recodeyesno <- function(x) {
+	x <- dplyr::recode(x,`-7`=0,  `0`=0, `1`=1, `-1`=0, `-2`=0, `-3`=0, `-5` = 0)
+}
+
+### თანასწორობა გენდერული უმცირესობებისთვის
+may17$equality.minorities <- may17$d18
+
+### თანასწორობა სამღვდელოებისთვის
+may17$equality.clergy <- may17$q21
+
+### შერჩევითი სამართალი
+may17$justice.clergy <- may17$q24
+
+### ეროვნული საფრთხე
+may17$national.threat <- may17$q25
+
+### პირადი კონტაქტი
+may17$personal.contact <- may17$d17
+
+### “Nature” vs. “nurture”
+may17$nature.nurture <- may17$d19
+
+### ჰომოსექსუალობის კონტროლი
+may17$controllability <- may17$d20
+
+
+vars <- c("equality.minorities", "equality.clergy", "justice.clergy", "national.threat", "personal.contact", "nature.nurture", "controllability")
+
+may17[, vars] <- sapply(may17[, vars], recodeyesno)
+
+
+```
+
+ახალი ცვლადები ვაქციოთ ფაქტორად და მივუთითოთ ლეიბლები:
+
+```{r}
+may17$equality.minorities <- factor(may17$equality.minorities, levels=c(0, 1), labels=c("No", "Yes"))
+may17$equality.clergy <- factor(may17$equality.clergy, levels=c(0, 1), labels=c("No", "Yes"))
+may17$justice.clergy <- factor(may17$justice.clergy, levels=c(0, 1), labels=c("No", "Yes"))
+may17$national.threat <- factor(may17$national.threat, levels=c(0, 1), labels=c("No", "Yes"))
+may17$personal.contact <- factor(may17$personal.contact, levels=c(0, 1), labels=c("No", "Yes"))
+may17$nature.nurture <- factor(may17$nature.nurture, levels=c(0, 1), labels=c("Nurture", "Nature"))
+may17$controllability <- factor(may17$controllability, levels=c(0, 1), labels=c("No", "Yes"))
+
+```
+
+### მონაცემთა ანალიზი
+
+ბინარული რეგრესიული მოდელი, რომელიც წინასწარმეტყველებს რესპონდენტის ჰომოფობიურ განწყობას:
+
+```{r}
+may17$homophobia <- 0
+may17$homophobia[may17$q7==5] <- 1
+may17$homophobia <- factor(may17$homophobia, levels=c(0, 1), labels=c("Others", "No gay neighbors"))
+table(may17$homophobia)
+
+may17$sex <- may17$gender
+may17$sex[may17$sex==2] <- 0
+may17$sex <- factor(may17$sex, levels=c(0, 1), labels=c("Female", "Male"))
+table(may17$sex)
+
+
+homophobia.model <- glm(homophobia~sex+age+edu+relig+liberalism+equality.minorities+equality.clergy+justice.clergy+national.threat+personal.contact+nature.nurture+controllability, data=may17, family="binomial")
+
+summary(homophobia.model)
+
+```
+
+
+
+```{r}
+sex.margins <- cplot(homophobia.model, "sex", draw=FALSE)
+liberalism.margins <- cplot(homophobia.model, "liberalism", draw=FALSE)
+minorities.margins <- cplot(homophobia.model, "equality.minorities", draw=FALSE)
+clergy.margins <- cplot(homophobia.model, "equality.clergy", draw=FALSE)
+threat.margins <- cplot(homophobia.model, "national.threat", draw=FALSE)
+
+```
+
+
+### დიაგრამები
+
+
+```{r}
+ggplot(sex.margins, aes(xvals, yvals))+
+  geom_point(aes(color=xvals))+
+  geom_errorbar(aes(ymin=lower, ymax=upper, color=xvals), width=0.1, size=0.4, position=position_dodge(width=0.4))+
+  labs(title="Predicted probabilities of homophobia",
+		x="Respondent's gender",
+		y="Probability")+
+  theme_classic()
+
+```
+
+
+```{r}
+ggplot(liberalism.margins, aes(xvals, yvals))+
+  geom_line()+
+  geom_ribbon(aes(ymin=lower, ymax=upper), alpha=0.5)+
+  labs(title="Predicted probabilities of homophobia",
+		x="Liberal attitudes",
+		y="Probability")+
+  theme_classic()
+
+```
+
+
+```{r}
+ggplot(minorities.margins, aes(xvals, yvals))+
+  geom_point(aes(color=xvals))+
+  geom_errorbar(aes(ymin=lower, ymax=upper, color=xvals), width=0.1, size=0.4, position=position_dodge(width=0.4))+
+  labs(title="Predicted probabilities of homophobia",
+		x="Should sexual minorities have the same rights as the rest of the population, or
+not?",
+		y="Probability")+
+  theme_classic()
+
+```
+
+```{r}
+ggplot(clergy.margins, aes(xvals, yvals))+
+  geom_point(aes(color=xvals))+
+  geom_errorbar(aes(ymin=lower, ymax=upper, color=xvals), width=0.1, size=0.4, position=position_dodge(width=0.4))+
+  labs(title="Predicted probabilities of homophobia",
+		x="Should everyone be equal before the law, including the clergy, or not?",
+		y="Probability")+
+  theme_classic()
+
+```
+
+```{r}
+ggplot(threat.margins, aes(xvals, yvals))+
+  geom_point(aes(color=xvals))+
+  geom_errorbar(aes(ymin=lower, ymax=upper, color=xvals), width=0.1, size=0.4, position=position_dodge(width=0.4))+
+  labs(title="Predicted probabilities of homophobia",
+		x="Would holding a IDAHOT demonstration on May 17 endanger Georgia, or
+not?",
+		y="Probability")+
+  theme_classic()
+
+```
