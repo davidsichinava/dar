@@ -53,6 +53,8 @@ R-Studio-ს ჩამოტვირთვა [ამ ბმულიდან]
 
 კითხვების, კომენტარების, ასევე - შეცდომების აღმოჩენის შემთხვევაში და ა.შ., მომმართეთ პირადად ან ელექტრონულ ფოსტაზე: david.sichinava@tsu.ge
 
+ლექციები ჩატარდება თსუ მე-3 კორპუსში, 208-ე აუდიტორიაში.
+
 <span style="width: 300px; display:inline-block; text-align:center;">
-<img class="manImg" src="img/go_erthaoz.gif"></img>
+<img class="manImg" src="img/Kermit.gif"></img>
 </span>

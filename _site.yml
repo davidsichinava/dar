@@ -1,21 +1,16 @@
-name: "მონაცემთა ანალიზი R-ის გამოყენებით"
+name: "Quantitative Research Methods"
 navbar:
-  title: "ნავიგაცია"
+  title: "Navigation"
   left:
-     - text: "თავფურცელი"
+     - text: "Home"
        href: index.html
-     - text: "მასალები"
+     - text: "Materials"
        href: pages/materials.html
-     - text: "თემები"
+     - text: "Topics"
        href: pages/topic.html
-     - text: "სილაბუსი, დასწრება და შეფასება"
+     - text: "Syllabus, Attendance, Assessment"
        href: pages/attend.html
-     - text: "R-სახელმძღვანელო"
-       menu:
-       - text: "წიგნიერი პროგრამირება და R-გარემო"
-         href: pages/intro.html
-       - text: "მონაცემთა მანიპულაცია"
-         href: pages/manipulation.html
+
 
 output:
   html_document:
