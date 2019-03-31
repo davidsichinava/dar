@@ -2,13 +2,13 @@ name: "Quantitative Research Methods"
 navbar:
   title: "Navigation"
   left:
-     - text: "Home"
+     - text: "თავფურცელი"
        href: index.html
-     - text: "Materials"
+     - text: "მასალები"
        href: pages/materials.html
-     - text: "Topics"
+     - text: "თემებ"
        href: pages/topic.html
-     - text: "Syllabus, Attendance, Assessment"
+     - text: "სილაბუსი, დასწრება, შეფასება"
        href: pages/attend.html
 
 
