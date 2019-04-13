@@ -51,3 +51,16 @@ output: html_document
 * [ლაბორატორიული დავალება](https://www.dropbox.com/s/bhrmma379ihen9o/lab2.pdf?dl=0)
 * დავალება ატვირთეთ [ამ ლინკზე](https://www.dropbox.com/request/sl2iimmayEq1Ym3f95zf)
 
+### თემა 3: ალბათობა
+
+![](ico/open-book.png) საკითხავი მასალა:
+
+* QSS, თავი 6, სექცია 6.1-6.4
+
+
+* <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
+<a href="https://davidsichinava.github.io/dar/meetings/m3/pres/meeting_3.html">პრეზენტაცია</a>
+* [ლაბორატორიული დავალება](https://www.dropbox.com/s/96ezsciso3az13g/lab3.pdf?dl=0)
+* დავალება ატვირთეთ [ამ ლინკზე](https://www.dropbox.com/request/LhDYEJjQZQRW0DgdeoS2)
+
+...
