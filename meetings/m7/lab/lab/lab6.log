@@ -1,0 +1,480 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.19 (MiKTeX 2.9.6840 64-bit) (preloaded format=pdflatex 2018.11.14)  10 MAY 2019 18:00
+entering extended mode
+**./lab6.tex
+(lab6.tex
+LaTeX2e <2018-04-01> patch level 5
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\size10.clo"
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@section=\count81
+\c@subsection=\count82
+\c@subsubsection=\count83
+\c@paragraph=\count84
+\c@subparagraph=\count85
+\c@figure=\count86
+\c@table=\count87
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\trig.sty"
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\graphics.cfg"
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-def\pdftex.def"
+File: pdftex.def 2018/01/08 v1.0l Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen103
+\Gin@req@width=\dimen104
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\color.sty"
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\graphics-cfg\color.cfg"
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\framed\framed.sty"
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip43
+\fb@frw=\dimen105
+\fb@frh=\dimen106
+\FrameRule=\dimen107
+\FrameSep=\dimen108
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\alltt.sty"
+Package: alltt 1997/06/16 v2.0g defines alltt environment
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
+Package: inputenc 2018/04/06 v1.3b Input encoding file
+\inpenc@prehook=\toks15
+\inpenc@posthook=\toks16
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.sty"
+Package: babel 2018/09/26 3.24 The Babel package
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\switch.def"
+File: switch.def 2018/09/26 3.24 Babel switching mechanism
+)
+*************************************
+* Local config file bblopts.cfg used
+*
+("C:\Program Files\MiKTeX 2.9\tex\latex\arabi\bblopts.cfg"
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\babel-english\english.ldf"
+Language: english 2017/06/06 v3.3r English support from the babel system
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\babel.def"
+File: babel.def 2018/09/26 3.24 Babel common definitions
+\babel@savecnt=\count88
+\U@D=\dimen109
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel\txtbabel.def")
+\bbl@dirlevel=\count89
+)
+\l@canadian = a dialect from \language\l@american 
+\l@australian = a dialect from \language\l@british 
+\l@newzealand = a dialect from \language\l@british 
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel-georgian\georgian.ldf"
+Language: georgian 2017/11/20 2.2 Georgian support from the babel system
+
+
+Package babel Warning: No Georgian font encoding has been loaded so far.
+(babel)                A font encoding should be declared before babel.
+(babel)                Default `T8M' encoding will be loaded  on input line 77.
+
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\georgian\t8menc.def"
+File: t8menc.def 2009/03/04 v1.1 Georgian Mxedruli encoding definition file
+Now handling font encoding T8M ...
+... processing UTF-8 mapping file for font encoding T8M
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\georgian\t8menc.dfu"
+File: t8menc.dfu 2009/03/04 v1.1 UTF8 support for Georgian
+   defining Unicode char U+10A0 (decimal 4256)
+   defining Unicode char U+10A1 (decimal 4257)
+   defining Unicode char U+10A2 (decimal 4258)
+   defining Unicode char U+10A3 (decimal 4259)
+   defining Unicode char U+10A4 (decimal 4260)
+   defining Unicode char U+10A5 (decimal 4261)
+   defining Unicode char U+10A6 (decimal 4262)
+   defining Unicode char U+10A7 (decimal 4263)
+   defining Unicode char U+10A8 (decimal 4264)
+   defining Unicode char U+10A9 (decimal 4265)
+   defining Unicode char U+10AA (decimal 4266)
+   defining Unicode char U+10AB (decimal 4267)
+   defining Unicode char U+10AC (decimal 4268)
+   defining Unicode char U+10AD (decimal 4269)
+   defining Unicode char U+10AE (decimal 4270)
+   defining Unicode char U+10AF (decimal 4271)
+   defining Unicode char U+10B0 (decimal 4272)
+   defining Unicode char U+10B1 (decimal 4273)
+   defining Unicode char U+10B2 (decimal 4274)
+   defining Unicode char U+10B3 (decimal 4275)
+   defining Unicode char U+10B4 (decimal 4276)
+   defining Unicode char U+10B5 (decimal 4277)
+   defining Unicode char U+10B6 (decimal 4278)
+   defining Unicode char U+10B7 (decimal 4279)
+   defining Unicode char U+10B8 (decimal 4280)
+   defining Unicode char U+10B9 (decimal 4281)
+   defining Unicode char U+10BA (decimal 4282)
+   defining Unicode char U+10BB (decimal 4283)
+   defining Unicode char U+10BC (decimal 4284)
+   defining Unicode char U+10BD (decimal 4285)
+   defining Unicode char U+10BE (decimal 4286)
+   defining Unicode char U+10BF (decimal 4287)
+   defining Unicode char U+10C0 (decimal 4288)
+   defining Unicode char U+10C4 (decimal 4292)
+   defining Unicode char U+10C1 (decimal 4289)
+   defining Unicode char U+10C5 (decimal 4293)
+   defining Unicode char U+10C2 (decimal 4290)
+   defining Unicode char U+10C3 (decimal 4291)
+   defining Unicode char U+10D0 (decimal 4304)
+   defining Unicode char U+10D1 (decimal 4305)
+   defining Unicode char U+10D2 (decimal 4306)
+   defining Unicode char U+10D3 (decimal 4307)
+   defining Unicode char U+10D4 (decimal 4308)
+   defining Unicode char U+10D5 (decimal 4309)
+   defining Unicode char U+10D6 (decimal 4310)
+   defining Unicode char U+10D7 (decimal 4311)
+   defining Unicode char U+10D8 (decimal 4312)
+   defining Unicode char U+10D9 (decimal 4313)
+   defining Unicode char U+10DA (decimal 4314)
+   defining Unicode char U+10DB (decimal 4315)
+   defining Unicode char U+10DC (decimal 4316)
+   defining Unicode char U+10DD (decimal 4317)
+   defining Unicode char U+10DE (decimal 4318)
+   defining Unicode char U+10DF (decimal 4319)
+   defining Unicode char U+10E0 (decimal 4320)
+   defining Unicode char U+10E1 (decimal 4321)
+   defining Unicode char U+10E2 (decimal 4322)
+   defining Unicode char U+10E3 (decimal 4323)
+   defining Unicode char U+10E4 (decimal 4324)
+   defining Unicode char U+10E5 (decimal 4325)
+   defining Unicode char U+10E6 (decimal 4326)
+   defining Unicode char U+10E7 (decimal 4327)
+   defining Unicode char U+10E8 (decimal 4328)
+   defining Unicode char U+10E9 (decimal 4329)
+   defining Unicode char U+10EA (decimal 4330)
+   defining Unicode char U+10EB (decimal 4331)
+   defining Unicode char U+10EC (decimal 4332)
+   defining Unicode char U+10ED (decimal 4333)
+   defining Unicode char U+10EE (decimal 4334)
+   defining Unicode char U+10EF (decimal 4335)
+   defining Unicode char U+10F0 (decimal 4336)
+   defining Unicode char U+10F1 (decimal 4337)
+   defining Unicode char U+10F2 (decimal 4338)
+   defining Unicode char U+10F3 (decimal 4339)
+   defining Unicode char U+10F4 (decimal 4340)
+   defining Unicode char U+10F5 (decimal 4341)
+   defining Unicode char U+10F6 (decimal 4342)
+   defining Unicode char U+10F7 (decimal 4343)
+   defining Unicode char U+10F8 (decimal 4344)
+   defining Unicode char U+10F9 (decimal 4345)
+   defining Unicode char U+10FA (decimal 4346)
+   defining Unicode char U+10FB (decimal 4347)
+   defining Unicode char U+10FC (decimal 4348)
+))
+Package babel Info: Making " an active character on input line 110.
+Package babel Info: \geodash is defined on input line 146.
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\babel-georgian\georgiancaps.tex"
+File: georgiancaps.tex 2013/06/06 v2.0 Captions in Georgian
+)))
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
+Package: geometry 2018/04/16 v5.8 Page Geometry
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
+Package: ifpdf 2018/09/07 v3.3 Provides the ifpdf switch
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifvtex.sty"
+Package: ifvtex 2016/05/16 v1.6 Detect VTeX and its facilities (HO)
+Package ifvtex Info: VTeX not detected.
+)
+("C:\Program Files\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+\Gm@cnth=\count90
+\Gm@cntv=\count91
+\c@Gm@tempcnt=\count92
+\Gm@bindingoffset=\dimen110
+\Gm@wd@mp=\dimen111
+\Gm@odd@mp=\dimen112
+\Gm@even@mp=\dimen113
+\Gm@layoutwidth=\dimen114
+\Gm@layoutheight=\dimen115
+\Gm@layouthoffset=\dimen116
+\Gm@layoutvoffset=\dimen117
+\Gm@dimlist=\toks17
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
+("C:\Program Files\MiKTeX 2.9\tex\latex\booktabs\booktabs.sty"
+Package: booktabs 2005/04/14 v1.61803 publication quality tables
+\heavyrulewidth=\dimen118
+\lightrulewidth=\dimen119
+\cmidrulewidth=\dimen120
+\belowrulesep=\dimen121
+\belowbottomsep=\dimen122
+\aboverulesep=\dimen123
+\abovetopsep=\dimen124
+\cmidrulesep=\dimen125
+\cmidrulekern=\dimen126
+\defaultaddspace=\dimen127
+\@cmidla=\count93
+\@cmidlb=\count94
+\@aboverulesep=\dimen128
+\@belowrulesep=\dimen129
+\@thisruleclass=\count95
+\@lastruleclass=\count96
+\@thisrulewidth=\dimen130
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
+Package: hyperref 2018/09/30 v6.88a Hypertext links for LaTeX
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
+Package: hobsub-hyperref 2016/05/16 v1.14 Bundle oberdiek, subset hyperref (HO)
+
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
+Package: hobsub-generic 2016/05/16 v1.14 Bundle oberdiek, subset generic (HO)
+Package: hobsub 2016/05/16 v1.14 Construct package bundles (HO)
+Package: infwarerr 2016/05/16 v1.4 Providing info/warning/error messages (HO)
+Package: ltxcmds 2016/05/16 v1.23 LaTeX kernel commands for general use (HO)
+Package: ifluatex 2016/05/16 v1.4 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+Package hobsub Info: Skipping package `ifvtex' (already loaded).
+Package: intcalc 2016/05/16 v1.2 Expandable calculations with integers (HO)
+Package hobsub Info: Skipping package `ifpdf' (already loaded).
+Package: etexcmds 2016/05/16 v1.6 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+Package: kvsetkeys 2016/05/16 v1.17 Key value parser (HO)
+Package: kvdefinekeys 2016/05/16 v1.4 Define keys (HO)
+Package: pdftexcmds 2018/09/10 v0.29 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+Package: pdfescape 2016/05/16 v1.14 Implements pdfTeX's escape features (HO)
+Package: bigintcalc 2016/05/16 v1.4 Expandable calculations on big integers (HO
+)
+Package: bitset 2016/05/16 v1.2 Handle bit-vector datatype (HO)
+Package: uniquecounter 2016/05/16 v1.3 Provide unlimited unique counter (HO)
+)
+Package hobsub Info: Skipping package `hobsub' (already loaded).
+Package: letltxmacro 2016/05/16 v1.5 Let assignment for LaTeX macros (HO)
+Package: hopatch 2016/05/16 v1.3 Wrapper for package hooks (HO)
+Package: xcolor-patch 2016/05/16 xcolor patch
+Package: atveryend 2016/05/16 v1.9 Hooks at the very end of document (HO)
+Package atveryend Info: \enddocument detected (standard20110627).
+Package: atbegshi 2016/06/09 v1.18 At begin shipout hook (HO)
+Package: refcount 2016/05/16 v3.5 Data extraction from label references (HO)
+Package: hycolor 2016/05/16 v1.8 Color options for hyperref/bookmark (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
+Package: auxhook 2016/05/16 v1.4 Hooks for auxiliary files (HO)
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+Package: kvoptions 2016/05/16 v3.12 Key value format for package options (HO)
+)
+\@linkdim=\dimen131
+\Hy@linkcounter=\count97
+\Hy@pagecounter=\count98
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
+File: pd1enc.def 2018/09/30 v6.88a Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+\Hy@SavedSpaceFactor=\count99
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
+File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
+)
+Package hyperref Info: Hyper figures OFF on input line 4535.
+Package hyperref Info: Link nesting OFF on input line 4540.
+Package hyperref Info: Hyper index ON on input line 4543.
+Package hyperref Info: Plain pages OFF on input line 4550.
+Package hyperref Info: Backreferencing OFF on input line 4555.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4788.
+\c@Hy@tempcnt=\count100
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\url\url.sty"
+\Urlmuskip=\muskip10
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+LaTeX Info: Redefining \url on input line 5141.
+\XeTeXLinkMargin=\dimen132
+\Fld@menulength=\count101
+\Field@Width=\dimen133
+\Fld@charsize=\dimen134
+Package hyperref Info: Hyper figures OFF on input line 6396.
+Package hyperref Info: Link nesting OFF on input line 6401.
+Package hyperref Info: Hyper index ON on input line 6404.
+Package hyperref Info: backreferencing OFF on input line 6411.
+Package hyperref Info: Link coloring OFF on input line 6416.
+Package hyperref Info: Link coloring with OCG OFF on input line 6421.
+Package hyperref Info: PDF/A mode OFF on input line 6426.
+LaTeX Info: Redefining \ref on input line 6466.
+LaTeX Info: Redefining \pageref on input line 6470.
+\Hy@abspage=\count102
+\c@Item=\count103
+\c@Hfootnote=\count104
+)
+Package hyperref Info: Driver (autodetected): hpdftex.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
+File: hpdftex.def 2018/09/30 v6.88a Hyperref driver for pdfTeX
+\Fld@listcount=\count105
+\c@bookmark@seq@number=\count106
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
+Package: rerunfilecheck 2016/05/16 v1.8 Rerun checks for auxiliary files (HO)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+82.
+)
+\Hy@SectionHShift=\skip44
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 69.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\upquote\upquote.sty"
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+) (lab6.aux
+LaTeX Font Info:    Try loading font information for T8M+cmr on input line 20.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\georgian\t8mcmr.fd"
+File: t8mcmr.fd t8mcmr fontfile
+)
+LaTeX Font Info:    Try loading font information for T8M+djg on input line 20.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\georgian\t8mdjg.fd"
+File: t8mdjg.fd 2007/10/20 Fontinst v1.929 font definitions for T8M/djg.
+)
+LaTeX Font Info:    Font shape `T8M/cmr/m/n' in size <10> not available
+(Font)              Font shape `T8M/djg/m/n' tried instead on input line 20.
+LaTeX Font Info:    Font shape `T8M/djg/m/n' will be
+(Font)              scaled to size 8.99994pt on input line 20.
+)
+\openout1 = `lab6.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T8M/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+
+("C:\Program Files\MiKTeX 2.9\tex\context\base\mkii\supp-pdf.mkii"
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count107
+\scratchdimen=\dimen135
+\scratchbox=\box26
+\nofMPsegments=\count108
+\nofMParguments=\count109
+\everyMPshowfont=\toks18
+\MPscratchCnt=\count110
+\MPscratchDim=\dimen136
+\MPnumerator=\count111
+\makeMPintoPDFobject=\count112
+\everyMPtoPDFconversion=\toks19
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
+Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
+Package: grfext 2016/05/16 v1.2 Manage graphics extensions (HO)
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+38.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPE
+G,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 456.
+)
+*geometry* driver: auto-detecting
+*geometry* detected driver: pdftex
+*geometry* verbose mode - [ preamble ] result:
+* driver: pdftex
+* paper: <default>
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* modes: 
+* h-part:(L,W,R)=(92.14519pt, 430.00462pt, 92.14519pt)
+* v-part:(T,H,B)=(95.39737pt, 556.47656pt, 143.09605pt)
+* \paperwidth=614.295pt
+* \paperheight=794.96999pt
+* \textwidth=430.00462pt
+* \textheight=556.47656pt
+* \oddsidemargin=19.8752pt
+* \evensidemargin=19.8752pt
+* \topmargin=-13.87262pt
+* \headheight=12.0pt
+* \headsep=25.0pt
+* \topskip=10.0pt
+* \footskip=30.0pt
+* \marginparwidth=65.0pt
+* \marginparsep=11.0pt
+* \columnsep=10.0pt
+* \skip\footins=9.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+\AtBeginShipoutBox=\box27
+Package hyperref Info: Link coloring ON on input line 75.
+("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
+Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
+
+("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
+Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
+)
+\c@section@level=\count113
+)
+LaTeX Info: Redefining \ref on input line 75.
+LaTeX Info: Redefining \pageref on input line 75.
+LaTeX Info: Redefining \nameref on input line 75.
+
+(lab6.out) (lab6.out)
+\@outlinefile=\write3
+\openout3 = `lab6.out'.
+

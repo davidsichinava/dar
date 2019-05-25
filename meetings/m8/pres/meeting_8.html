@@ -821,7 +821,7 @@ hljs.initHighlightingOnLoad();
   <div class="slides">
 
 <section data-state="section" data-transition="none" data-transition-speed="default">
-<h1>რაოდენობრივ მონაცემთა ანალიზი R-გარემოში</h1><p>დავით სიჭინავა<br/>11 მაისი, 2018</p>
+<h1>რაოდენობრივ მონაცემთა ანალიზი R-გარემოში</h1><p>დავით სიჭინავა<br/>24 მაისი, 2019 წ.</p>
 
 <div class="slideContent" >
 <p><span style="font-weight:bold; font-family:BPG_upper;">მერვე შეხვედრა</span></p>
@@ -977,22 +977,34 @@ face$diff.share &lt;- face$d.share - face$r.share
 <h3>წრფივი დამოკიდებულება:</h3>
 <div class="slideContent" >
 <pre><code class="r">fit &lt;- lm(diff.share ~ d.comp, data = face) # fit the model
-fit
+summary(fit)
 </code></pre>
 
 </div>
 
 </section>
 <section data-transition="none" data-transition-speed="default">
-<h3>დიაგრამა!</h3>
+<h3>დიაგრამა</h3>
 <div class="slideContent" >
-<pre><code class="r">plot(face$d.comp, face$diff.share, xlim = c(0, 1.05), ylim = c(-1,1),
-xlab = &quot;Competence scores for Democrats&quot;,
-ylab = &quot;Democratic margin in vote share&quot;,
-main = &quot;Facial competence and vote share&quot;)
-abline(fit) # add regression line
-abline(v = 0, lty = &quot;dashed&quot;)
+<pre><code class="r">ggplot(face, aes(x=d.comp, y=diff.share))+
+  geom_point()+
+  geom_smooth(method=&quot;lm&quot;)+
+  labs(title=&quot;აღქმული კომპეტენტურობა და საარჩევნო წარმატება&quot;,
+       x=&quot;დემოკრატი კანდიდატის კომპეტენტურობა&quot;,
+       y=&quot;სხვაობა საარჩევნო ხმების პროპორციაში&quot;)+
+  theme_bw()
 </code></pre>
+
+</div>
+
+</section>
+<section data-transition="none" data-transition-speed="default">
+<h3>რაშია საქმე?</h3>
+<div class="slideContent" >
+<ul>
+<li>როგორც ვხედავთ, მოდელის მიერ ნაწინასწარმეტყველებ შედეგსა და რეალურად არსებულ მონაცემებს შორის სხვაობა არსებობს;</li>
+<li>მიუხედავად ამისა, იგი წარმოადგენს ისეთ <em>თეორიულ წრფეს</em>, რომლის შესაბამისი ცდომილებები ყველაზე მცირეა</li>
+</ul>
 
 </div>
 
@@ -1003,8 +1015,18 @@ abline(v = 0, lty = &quot;dashed&quot;)
 <ul>
 <li>საუკეთესო თეორიული წრფის შერჩევა</li>
 <li>ვარჩევთ იმ პარამეტრებს, რომელთა ცდომილებათა ჯამი ყველაზე მცირეა</li>
-<li>ცდომილებათა საშუალო კვადრატული (RMSE)
-\( RMSE = \sqrt{\frac{1}{n}SSR} \)</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="none" data-transition-speed="default">
+<h3>უმცირეს კვადრატთა მეთოდი</h3>
+<div class="slideContent" >
+<ul>
+<li>ცდომილებათა კვადრატების ჯამი</li>
+<li>\( SSR = \sum_{n}^{i=1}\hat\epsilon^2_{i}=\sum_{n}^{i=1}(Y_{i}-\hat{Y}_{i})=\sum_{n}^{i=1}(Y_{i}-\hat\alpha+\hat\beta X_{i}) \)</li>
+<li>ცდომილებათა საშუალო კვადრატული : \( RMSE=\sqrt{\frac{1}{n}SSR}=\sqrt{\frac{1}{n}\sum_{n}^{i=1}\hat\epsilon^2_{i}} \)</li>
 </ul>
 
 </div>
@@ -1021,30 +1043,90 @@ sqrt(mean(epsilon.hat^2)) # RMSE
 
 </section>
 <section data-transition="none" data-transition-speed="default">
-<h3>დეტერმინაციის კოეფიციენტი:</h3>
+<h3>უმცირეს კვადრატთა მეთოდი</h3>
 <div class="slideContent" >
-<pre><code class="r">florida &lt;- read.csv(&quot;florida.csv&quot;)
-fit2 &lt;- lm(Buchanan00 ~ Perot96, data = florida)
-fit2
+<pre><code class="r">ggplot(face, aes(x=d.comp, y=diff.share))+
+  geom_point()+
+  geom_vline(xintercept = 0, color=&quot;red&quot;)+
+  geom_hline(yintercept = mean(face$diff.share), color=&quot;red&quot;, linetype=&quot;dashed&quot;)+
+  geom_vline(xintercept = mean(face$d.comp), color=&quot;blue&quot;, linetype=&quot;dashed&quot;)+
+  geom_point(aes(x=mean(d.comp), y=mean(diff.share)), color=&quot;red&quot;, size=3)+
+  geom_point(aes(x=0, y=coef(fit)[1]), color=&quot;red&quot;, size=3)+
+  geom_smooth(method=&quot;lm&quot;, se = FALSE, fullrange=TRUE)+
+  labs(title=&quot;აღქმული კომპეტენტურობა და საარჩევნო წარმატება&quot;,
+       x=&quot;დემოკრატი კანდიდატის კომპეტენტურობა&quot;,
+       y=&quot;სხვაობა საარჩევნო ხმების პროპორციაში&quot;)+
+  theme_bw()
 </code></pre>
 
 </div>
 
 </section>
 <section data-transition="none" data-transition-speed="default">
-<h3>დეტერმინაციის კოეფიციენტი:</h3>
+<h3>უმცირეს კვადრატთა მეთოდი</h3>
 <div class="slideContent" >
-<pre><code class="r">fit2summary &lt;- summary(fit2)
-fit2summary$r.squared
-</code></pre>
+<ul>
+<li>აქედან გამომდინარე, შესაძლებელია წრფის ისეთი პარამეტრების შერჩევა, რომელებისთვისაც ცოდმილებათა საშუალო კვადრატული მინიმალურია</li>
+<li>\( \hat\alpha=\frac{(\Sigma y) (\Sigma x^2)-(\Sigma x\Sigma xy)}{n\Sigma x^2-(\Sigma x)^2} \)</li>
+<li>\( \hat\beta=\frac{n(\Sigma xy)-(\Sigma x)(\Sigma y)}{n\Sigma x^2-(\Sigma x)^2} \)</li>
+</ul>
 
 </div>
 
 </section>
 <section data-transition="none" data-transition-speed="default">
-<h3>ბეტა-კოეფიციენტი:</h3>
+<h3>რეგრესიის კოეფიციენტები</h3>
 <div class="slideContent" >
 <p>\( \beta = corr(X, Y) * \frac{SD(Y)}{SD(X)} \)</p>
+
+</div>
+
+</section>
+<section data-transition="none" data-transition-speed="default">
+<h3>უმცირეს კვადრატთა მეთოდი</h3>
+<div class="slideContent" >
+<pre><code class="r">cor(face$d.comp, face$diff.share)*(sd(face$diff.share)/sd(face$d.comp))
+
+coef(fit)[2]
+</code></pre>
+
+</div>
+
+</section>
+<section data-transition="none" data-transition-speed="default">
+<h3>უმცირეს კვადრატთა წრფივი რეგრესიის კოეფიციენტების ინტერპრეტაცია</h3>
+<div class="slideContent" >
+<ul>
+<li>მოდელის თანახმად, დამოუკიდებელი ცვლადის  1 ერთეულით (პროცენტით) ცვლილება <em>დაკავშირებულია</em>  დამოკიდებული ცვლადის \( \hat\beta \) ერთეულით (პროცენტით ) ცვლილებასთან</li>
+<li>დემოკრატი კანდიდატის კომპეტენტურობის შეფასების ერთი ერთეულით ზრდა დაკავშირებულია ხმებს შორის სხვაობის 0.66 ერთეულით ზრდასთან (ყურადღება მივაქციოთ რეგრესიის კოეფიციენტის ნიშანს)</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="none" data-transition-speed="default">
+<h3>დეტერმინაციის კოეფიციენტი:</h3>
+<div class="slideContent" >
+<ul>
+<li>რამდენად კარგად ან ცუდად აღწერს მოდელი მონაცემებს? ამის გასაგებად რეგრესიის <em>დეტერმინაციის კოეფიციენტს</em> (\( R^2 \)) ვიყენებთ</li>
+<li>\( TSS=\Sigma(Y_{i}-\hat{Y}) \)</li>
+<li>\( R^2=1-\frac{SSR}{TSS} \)</li>
+<li>დეტერმინაციის კოეფიციენტი გვიჩვენებს, თუ ვარიაციის <em>რა ნაწილს</em> ხსნის ჩვენი მოდელი</li>
+</ul>
+
+</div>
+
+</section>
+<section data-transition="none" data-transition-speed="default">
+<h3>დეტერმინაციის კოეფიციენტი:</h3>
+<div class="slideContent" >
+<pre><code class="r">fitsummary &lt;- summary(fit)
+fitsummary$r.squared
+</code></pre>
+
+<ul>
+<li>როგორც ვხედავთ, სახის გამომეტყველებით, კანდიდატთა ხმების პროცენტული სხვაობაში ვარიაციის 19%-ის ახსნაა შესაძლებელი</li>
+</ul>
 
 </div>
 

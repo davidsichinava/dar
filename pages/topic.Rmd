@@ -86,4 +86,49 @@ output: html_document
 * ანოტირებული ბიბლიოგრაფია: Holland, P. (1986) [Statistics and Causal Inference](https://www.dropbox.com/s/u4qjvf9swowl09q/Holland1986.pdf?dl=0). _Journal of the American Statistical Association, Vol. 81, No. 396_
 
 
+### თემა 5: განუსაზღვრელობის შეფასება
+#### ![](ico/teacher.png) ლექცია:
+
+* განუსაზღვრელობა
+	+ შეფასება
+	+ ჰიპოთეზის შემოწმება
+* ერთი და ორი შერჩევის t-კრიტერიუმის ტესტი
+* სტატისტიკური სიმძლავრე
+* [ლაბორატორიული დავალება](https://www.dropbox.com/s/zxdb1ctvscd07ru/lab5.pdf?dl=0)
+
+
+![](ico/open-book.png) საკითხავი მასალა:
+
+* QSS, თავი 7, სექცია 7.1-7.3
+
+* <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
+<a href="https://davidsichinava.github.io/dar/meetings/m5/pres/meeting_5.html">პრეზენტაცია</a>
+
+
+### თემა 6: მონაცემთა ვიზუალიზაცია სოციალურ მეცნიერებებში
+
+
+* <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
+<a href="https://davidsichinava.github.io/dar/meetings/m6/pres/meeting_6.html">პრეზენტაცია</a>
+
+
+### თემა 7: ბივარიაციული დამოკიდებულების აღწერა. კლასტერული ანალიზი k-საშუალოთა ალგორითმის გამოყენებით
+
+* QSS, თავი 3, სექცია 3.6-3.7
+
+
+* <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
+<a href="https://davidsichinava.github.io/dar/meetings/m7/pres/meeting_7.html">პრეზენტაცია</a>
+* [ლაბორატორიული დავალება](https://www.dropbox.com/s/td5mchra7n9b6eh/lab6.pdf?dl=0)
+
+### თემა 8: მარტივი წრფივი რეგრესია უმცირეს კვადრატთა მეთოდით
+
+![](ico/open-book.png) საკითხავი მასალა:
+
+* QSS, თ. 4, სექცია 4.1-4.3
+
+* <img src="ico/teacher.png" alt="Drawing" style="width: 16px; vertical-align:middle;"/> 
+<a href="https://davidsichinava.github.io/dar/meetings/m8/pres/meeting_8.html">პრეზენტაცია</a>
+* [ლაბორატორიული დავალება](https://www.dropbox.com/s/zxdb1ctvscd07ru/lab5.pdf?dl=0)
+
 ...
