@@ -1,14 +1,14 @@
-<div class="header" style="margin-top:0 px;font-size:60%;">DAR: მეცხრე შეხვედრა</div>
+<div class="header" style="margin-top:0 px;font-size:60%;">DAR: მე-11 შეხვედრა</div>
 
 რაოდენობრივ მონაცემთა ანალიზი R-გარემოში
 ========================================================
 author: დავით სიჭინავა
-date: 1 ივნისი, 2018
+date: 14 ივნისი, 2019 წ.
 autosize: true
 transition: none
 css: css/style.css
 font-family: 'BPG_upper'
-<span style="font-weight:bold; font-family:BPG_upper;">მეცხრე შეხვედრა</span>
+<span style="font-weight:bold; font-family:BPG_upper;">მე-11 შეხვედრა</span>
 
 
 
